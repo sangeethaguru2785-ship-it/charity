@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donation Receipts — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Stackly donor receipts — download tax-ready records for every donation.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body class="dash-body" data-dashboard="donor">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Donor dashboard navigation">
+    <div class="dash-brand">
+      <a href="index.html" aria-label="Stackly — back to home">
+        <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" type="button" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Workspace</span>
+      <a class="dash-nav-link" href="donor-dashboard.html"><i class="bi bi-grid-1x2-fill"></i> Overview</a>
+      <a class="dash-nav-link" href="donor-history.html"><i class="bi bi-clock-history"></i> Donation history</a>
+      <a class="dash-nav-link" href="donor-campaigns.html"><i class="bi bi-megaphone-fill"></i> Campaigns</a>
+      <a class="dash-nav-link active" href="donor-receipts.html" aria-current="page"><i class="bi bi-receipt"></i> Receipts</a>
+      <span class="dash-nav-label">Explore</span>
+      <a class="dash-nav-link" href="donor-causes.html"><i class="bi bi-heart-fill"></i> Causes</a>
+      <a class="dash-nav-link" href="donor-events.html"><i class="bi bi-calendar-heart-fill"></i> Events</a>
+      <a class="dash-nav-link" href="donor-gallery.html"><i class="bi bi-camera-fill"></i> Gallery</a>
+      <span class="dash-nav-label">Account</span>
+      <a class="dash-nav-link" href="donor-settings.html"><i class="bi bi-sliders2"></i> Settings</a>
+      <a class="dash-nav-link" href="donor-support.html"><i class="bi bi-life-preserver"></i> Help & support</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <div class="dash-side-actions">
+        <a class="dash-side-btn" href="index.html"><i class="bi bi-house-door-fill"></i> Go to Home</a>
+        <a class="dash-side-btn dash-side-btn-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-header">
+      <button class="dash-menu-btn" id="dashMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dashSidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="dash-head-title">
+        <h1>Receipts</h1>
+        <p>Tax-ready records &middot; <span>November 2026</span></p>
+      </div>
+
+      <div class="dash-head-actions">
+        <div class="dropdown">
+          <button class="dash-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+            <span class="avatar avatar-emerald">SM</span>
+            <span class="dash-profile-meta"><strong>Sarah Mitchell</strong><span>Gold donor</span></span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dash-dropdown">
+            <li><a class="dropdown-item" href="donor-settings.html"><i class="bi bi-person-fill"></i>My profile</a></li>
+            <li><a class="dropdown-item" href="donor-settings.html"><i class="bi bi-gear-fill"></i>Account settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door-fill"></i>Go to Home</a></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content" id="main">
+      <div class="dash-page-head">
+        <div>
+          <h2>Receipts</h2>
+          <p>Download tax-ready records for every donation you have made.</p>
+        </div>
+        <div class="dash-page-actions"><a class="dash-btn dash-btn-light" href="404.html"><i class="bi bi-download"></i> Download all</a></div>
+      </div>
+      <section class="stat-grid cols-4" aria-label="Section statistics">
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-emerald"><i class="bi bi-receipt"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 6</span>
+          </div>
+          <span class="stat-card-label">Total receipts</span>
+          <strong class="stat-card-value">42</strong>
+          <span class="stat-card-note">Available to download</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-gold"><i class="bi bi-calendar-check-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 18.2%</span>
+          </div>
+          <span class="stat-card-label">This year</span>
+          <strong class="stat-card-value">$1,240</strong>
+          <span class="stat-card-note">Tax-deductible donations</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-sky"><i class="bi bi-shield-check"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 100%</span>
+          </div>
+          <span class="stat-card-label">Tax-deductible</span>
+          <strong class="stat-card-value">$1,240</strong>
+          <span class="stat-card-note">Verified by Stackly</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-rose"><i class="bi bi-hourglass-split"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 1</span>
+          </div>
+          <span class="stat-card-label">Pending</span>
+          <strong class="stat-card-value">1 receipt</strong>
+          <span class="stat-card-note">Awaiting payment confirmation</span>
+        </article>
+      </section>
+      <section class="dash-card" aria-labelledby="receiptListTitle">
+        <div class="card-head">
+          <div>
+            <h3 id="receiptListTitle">Donation receipts</h3>
+            <p>Tax-ready records for every gift</p>
+          </div>
+          <a class="dash-link" href="404.html">Download tax statement <i class="bi bi-download"></i></a>
+        </div>
+        <div class="receipt-list">
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info"><strong>Receipt #STK-2026-1042</strong><span>Nov 8, 2026 · Clean Water for Bongo</span></div>
+            <span class="receipt-amount">$250</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-1042"><i class="bi bi-download"></i></a>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info"><strong>Receipt #STK-2026-0987</strong><span>Oct 22, 2026 · Dhaka School Fund</span></div>
+            <span class="receipt-amount">$100</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0987"><i class="bi bi-download"></i></a>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info"><strong>Receipt #STK-2026-0901</strong><span>Sep 14, 2026 · Mobile Health Clinic</span></div>
+            <span class="receipt-amount">$75</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0901"><i class="bi bi-download"></i></a>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info"><strong>Receipt #STK-2026-0844</strong><span>Aug 2, 2026 · Zero Hunger Boxes</span></div>
+            <span class="receipt-amount">$60</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0844"><i class="bi bi-download"></i></a>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info"><strong>Receipt #STK-2026-0778</strong><span>Jun 30, 2026 · Clean Water for Bongo</span></div>
+            <span class="receipt-amount">$150</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0778"><i class="bi bi-download"></i></a>
+          </div>
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info"><strong>Receipt #STK-2026-0712</strong><span>May 18, 2026 · Animal Rescue Fund</span></div>
+            <span class="receipt-amount">$45</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0712"><i class="bi bi-download"></i></a>
+          </div>
+        </div>
+      </section>
+      <div class="dash-callout">
+        <i class="bi bi-file-earmark-check-fill"></i>
+        <div><strong>Tax-ready records</strong><p>Stackly issues an official receipt for every completed donation. Receipts include the campaign name, date, amount and organization tax registration.</p></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="dash-toast" id="dashToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i><span>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Events — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Stackly admin events — plan fundraisers, volunteer days and community gatherings.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body class="dash-body" data-dashboard="admin">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Admin dashboard navigation">
+    <div class="dash-brand">
+      <a href="index.html" aria-label="Stackly — back to home">
+        <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" type="button" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Workspace</span>
+      <a class="dash-nav-link" href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i> Overview</a>
+      <a class="dash-nav-link" href="admin-analytics.html"><i class="bi bi-graph-up-arrow"></i> Analytics</a>
+      <a class="dash-nav-link" href="admin-donations.html"><i class="bi bi-cash-stack"></i> Donations <span class="dash-nav-badge">12</span></a>
+      <a class="dash-nav-link" href="admin-campaigns.html"><i class="bi bi-megaphone-fill"></i> Campaigns</a>
+      <span class="dash-nav-label">Manage</span>
+      <a class="dash-nav-link" href="admin-causes.html"><i class="bi bi-heart-fill"></i> Causes</a>
+      <a class="dash-nav-link" href="admin-volunteers.html"><i class="bi bi-people-fill"></i> Volunteers</a>
+      <a class="dash-nav-link active" href="admin-events.html" aria-current="page"><i class="bi bi-calendar-heart-fill"></i> Events</a>
+      <span class="dash-nav-label">Account</span>
+      <a class="dash-nav-link" href="admin-settings.html"><i class="bi bi-sliders2"></i> Settings</a>
+      <a class="dash-nav-link" href="admin-support.html"><i class="bi bi-life-preserver"></i> Help & support</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <div class="dash-side-actions">
+        <a class="dash-side-btn" href="index.html"><i class="bi bi-house-door-fill"></i> Go to Home</a>
+        <a class="dash-side-btn dash-side-btn-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-header">
+      <button class="dash-menu-btn" id="dashMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dashSidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="dash-head-title">
+        <h1>Events</h1>
+        <p>Event calendar &middot; <span>November 2026</span></p>
+      </div>
+
+      <div class="dash-head-actions">
+        <div class="dropdown">
+          <button class="dash-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+            <span class="avatar avatar-gold">AM</span>
+            <span class="dash-profile-meta"><strong>Amara Mensah</strong><span>Admin</span></span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dash-dropdown">
+            <li><a class="dropdown-item" href="admin-settings.html"><i class="bi bi-person-fill"></i>My profile</a></li>
+            <li><a class="dropdown-item" href="admin-settings.html"><i class="bi bi-gear-fill"></i>Account settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door-fill"></i>Go to Home</a></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content" id="main">
+      <div class="dash-page-head">
+        <div>
+          <h2>Events</h2>
+          <p>Plan fundraisers, volunteer days and community gatherings from one calendar.</p>
+        </div>
+        <div class="dash-page-actions"><a class="dash-btn dash-btn-accent" href="404.html"><i class="bi bi-plus-lg"></i> Create event</a></div>
+      </div>
+      <section class="stat-grid cols-4" aria-label="Section statistics">
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-emerald"><i class="bi bi-calendar-heart-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 2 new</span>
+          </div>
+          <span class="stat-card-label">Upcoming events</span>
+          <strong class="stat-card-value">8</strong>
+          <span class="stat-card-note">Next event on Nov 18</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-gold"><i class="bi bi-calendar-check-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 3</span>
+          </div>
+          <span class="stat-card-label">This month</span>
+          <strong class="stat-card-value">3</strong>
+          <span class="stat-card-note">Fundraisers and volunteer days</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-sky"><i class="bi bi-people-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 120</span>
+          </div>
+          <span class="stat-card-label">Volunteers needed</span>
+          <strong class="stat-card-value">120</strong>
+          <span class="stat-card-note">Across upcoming events</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-violet"><i class="bi bi-graph-up-arrow"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 4.2%</span>
+          </div>
+          <span class="stat-card-label">Average attendance</span>
+          <strong class="stat-card-value">94%</strong>
+          <span class="stat-card-note">Registered vs attended</span>
+        </article>
+      </section>
+      <section class="dash-section" aria-labelledby="upcomingEventsTitle">
+        <div class="dash-section-head">
+          <div>
+            <h2 id="upcomingEventsTitle">Upcoming events</h2>
+            <p>Everything happening across the Stackly community</p>
+          </div>
+          <span class="dash-chip emerald"><i class="bi bi-calendar2-week"></i> November 2026</span>
+        </div>
+        <div class="event-list">
+          <article class="event-row">
+            <div class="event-date"><strong>18</strong><span>Nov</span></div>
+            <div class="event-info">
+              <h4>Clean Water Fundraiser Gala</h4>
+              <p>An evening of stories, music and giving to fund 12 new solar wells.</p>
+              <div class="event-meta"><span><i class="bi bi-geo-alt-fill"></i> Accra, Ghana</span><span><i class="bi bi-clock-fill"></i> 6:00 PM – 9:30 PM</span><span><i class="bi bi-people-fill"></i> 240 attending</span></div>
+            </div>
+            <div class="event-actions">
+              <a class="dash-btn dash-btn-outline dash-btn-sm" href="404.html">Manage</a>
+              <a class="dash-btn dash-btn-ghost dash-btn-sm" href="404.html">Share</a>
+            </div>
+          </article>
+          <article class="event-row">
+            <div class="event-date"><strong>22</strong><span>Nov</span></div>
+            <div class="event-info">
+              <h4>Community Health Drive</h4>
+              <p>Free screenings and maternal health consultations in partnership with local clinics.</p>
+              <div class="event-meta"><span><i class="bi bi-geo-alt-fill"></i> Nairobi, Kenya</span><span><i class="bi bi-clock-fill"></i> 9:00 AM – 4:00 PM</span><span><i class="bi bi-people-fill"></i> 64 volunteers</span></div>
+            </div>
+            <div class="event-actions">
+              <a class="dash-btn dash-btn-outline dash-btn-sm" href="404.html">Manage</a>
+              <a class="dash-btn dash-btn-ghost dash-btn-sm" href="404.html">Share</a>
+            </div>
+          </article>
+          <article class="event-row">
+            <div class="event-date"><strong>29</strong><span>Nov</span></div>
+            <div class="event-info">
+              <h4>Dhaka School Build Day</h4>
+              <p>Volunteers and donors come together to prepare classrooms for the new school term.</p>
+              <div class="event-meta"><span><i class="bi bi-geo-alt-fill"></i> Dhaka, Bangladesh</span><span><i class="bi bi-clock-fill"></i> 8:30 AM – 3:00 PM</span><span><i class="bi bi-people-fill"></i> 38 volunteers</span></div>
+            </div>
+            <div class="event-actions">
+              <a class="dash-btn dash-btn-outline dash-btn-sm" href="404.html">Manage</a>
+              <a class="dash-btn dash-btn-ghost dash-btn-sm" href="404.html">Share</a>
+            </div>
+          </article>
+          <article class="event-row">
+            <div class="event-date"><strong>05</strong><span>Dec</span></div>
+            <div class="event-info">
+              <h4>Zero Hunger Packing Night</h4>
+              <p>Pack 5,000 family food boxes for distribution before the winter holidays.</p>
+              <div class="event-meta"><span><i class="bi bi-geo-alt-fill"></i> London, UK</span><span><i class="bi bi-clock-fill"></i> 5:30 PM – 8:30 PM</span><span><i class="bi bi-people-fill"></i> 120 volunteers</span></div>
+            </div>
+            <div class="event-actions">
+              <a class="dash-btn dash-btn-outline dash-btn-sm" href="404.html">Manage</a>
+              <a class="dash-btn dash-btn-ghost dash-btn-sm" href="404.html">Share</a>
+            </div>
+          </article>
+          <article class="event-row">
+            <div class="event-date"><strong>12</strong><span>Dec</span></div>
+            <div class="event-info">
+              <h4>Youth STEM Showcase</h4>
+              <p>Celebrate the first cohort of girls in the Stackly STEM scholarship program.</p>
+              <div class="event-meta"><span><i class="bi bi-geo-alt-fill"></i> Hyderabad, India</span><span><i class="bi bi-clock-fill"></i> 10:00 AM – 1:00 PM</span><span><i class="bi bi-people-fill"></i> 180 attending</span></div>
+            </div>
+            <div class="event-actions">
+              <a class="dash-btn dash-btn-outline dash-btn-sm" href="404.html">Manage</a>
+              <a class="dash-btn dash-btn-ghost dash-btn-sm" href="404.html">Share</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="dash-card table-card" aria-labelledby="pastEventsTitle">
+        <div class="card-head">
+          <div>
+            <h3 id="pastEventsTitle">Past events</h3>
+            <p>Recent events and their outcomes</p>
+          </div>
+          <a class="dash-link" href="404.html">View all recaps <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="table-responsive">
+          <table class="dash-table">
+            <thead>
+              <tr><th scope="col">Event</th><th scope="col">Date</th><th scope="col">Location</th><th scope="col">Attendees</th><th scope="col">Raised</th><th scope="col">Recap</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Harvest Giving Dinner</td><td class="cell-muted">Oct 24, 2026</td><td>Toronto, Canada</td><td>186</td><td class="cell-strong">$42,800</td><td><a class="dash-link" href="404.html">View recap</a></td></tr>
+              <tr><td>Mobile Clinic Launch</td><td class="cell-muted">Oct 12, 2026</td><td>Kumasi, Ghana</td><td>92</td><td class="cell-strong">$18,400</td><td><a class="dash-link" href="404.html">View recap</a></td></tr>
+              <tr><td>Back-to-School Drive</td><td class="cell-muted">Sep 06, 2026</td><td>Dhaka, Bangladesh</td><td>214</td><td class="cell-strong">$31,600</td><td><a class="dash-link" href="404.html">View recap</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="dash-toast" id="dashToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i><span>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

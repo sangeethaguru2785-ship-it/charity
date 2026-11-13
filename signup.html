@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create account - Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Create a Stackly account as a donor or administrator and start making a measurable difference today.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/auth.css" rel="stylesheet">
+</head>
+<body class="auth-body" data-auth-page="signup">
+  <a class="skip-link" href="#authForm">Skip to sign up form</a>
+
+  <div class="auth-shell">
+    <aside class="auth-aside" aria-label="Why create a Stackly account">
+      <img class="auth-aside-photo" src="images/n1.webp" alt="" width="599" height="333" decoding="async">
+      <div class="auth-aside-overlay" aria-hidden="true"></div>
+      <a class="auth-logo" href="index.html" aria-label="Stackly - back to home">
+        <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+      </a>
+
+      <div class="auth-aside-body">
+        <span class="auth-eyebrow"><i class="bi bi-stars"></i> Join the community</span>
+        <h1>Start something <em>meaningful.</em></h1>
+        <p class="auth-aside-lead">Create your free account and turn everyday generosity into lasting change. Choose the role that fits how you want to make an impact.</p>
+
+        <ul class="auth-benefits">
+          <li><i class="bi bi-check-circle-fill"></i> Donors get a personal giving hub, receipts and campaign updates.</li>
+          <li><i class="bi bi-check-circle-fill"></i> Admins get tools to manage campaigns, donations and volunteers.</li>
+          <li><i class="bi bi-check-circle-fill"></i> Transparent reporting shows exactly where every dollar goes.</li>
+        </ul>
+      </div>
+
+      <div class="auth-aside-stats">
+        <div><strong>1.24M</strong><span>Lives reached</span></div>
+        <div><strong>96%</strong><span>Funds to programs</span></div>
+        <div><strong>4.9/5</strong><span>Donor rating</span></div>
+      </div>
+
+      <p class="auth-aside-quote">"I can see every campaign I support, every update, and every receipt in one place. It makes giving feel personal."</p>
+    </aside>
+
+    <main class="auth-main">
+      <div class="auth-topbar">
+        <a class="auth-mobile-logo" href="index.html" aria-label="Stackly home">
+          <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+        </a>
+        <a class="auth-back" href="index.html"><i class="bi bi-arrow-left"></i> Back to home</a>
+      </div>
+
+      <section class="auth-panel" aria-labelledby="authTitle">
+        <div class="auth-panel-head">
+          <h2 id="authTitle">Create your account</h2>
+          <p>Join Stackly and choose the workspace that fits you.</p>
+        </div>
+
+        <form id="authForm" data-auth-form novalidate>
+          <div class="role-picker" role="radiogroup" aria-label="Select your account role">
+            <label class="role-option">
+              <input type="radio" name="role" value="donor" checked>
+              <span class="role-option-inner">
+                <span class="role-icon"><i class="bi bi-heart-fill"></i></span>
+                <span>
+                  <strong>Donor</strong>
+                  <small>Give &amp; track impact</small>
+                </span>
+                <i class="bi bi-check-circle-fill role-check"></i>
+              </span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="role" value="admin">
+              <span class="role-option-inner">
+                <span class="role-icon"><i class="bi bi-shield-lock-fill"></i></span>
+                <span>
+                  <strong>Admin</strong>
+                  <small>Manage the mission</small>
+                </span>
+                <i class="bi bi-check-circle-fill role-check"></i>
+              </span>
+            </label>
+          </div>
+
+          <p class="role-note" id="roleNote" aria-live="polite">
+            <i class="bi bi-info-circle"></i>
+            <span id="roleNoteText">Create a donor account to manage donations, save payment details and download receipts.</span>
+          </p>
+
+          <div class="auth-field">
+            <label class="auth-label" for="signupName">Full name</label>
+            <div class="auth-input-wrap">
+              <i class="bi bi-person"></i>
+              <input class="form-control auth-input" type="text" id="signupName" name="name" placeholder="Your full name" autocomplete="name" data-validate="name" required>
+            </div>
+            <div class="invalid-feedback">Please enter your full name.</div>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label" for="signupEmail">Email address</label>
+            <div class="auth-input-wrap">
+              <i class="bi bi-envelope"></i>
+              <input class="form-control auth-input" type="email" id="signupEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label" for="signupPassword">Password</label>
+            <div class="auth-input-wrap has-toggle">
+              <i class="bi bi-lock"></i>
+              <input class="form-control auth-input" type="password" id="signupPassword" name="password" placeholder="Create a password" autocomplete="new-password" minlength="8" aria-describedby="passwordHint signupPasswordRules" required>
+              <button class="auth-eye" type="button" data-password-toggle="signupPassword" aria-label="Show password" aria-pressed="false">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+            <div class="password-strength" id="passwordStrength" data-score="0" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <p class="password-hint" id="passwordHint" aria-live="polite">Use 8+ characters with a mix of letters, numbers and symbols.</p>
+            <ul class="password-rules" id="signupPasswordRules" data-password-rules="signupPassword" aria-label="Password requirements">
+              <li data-rule="length"><i class="bi bi-circle" aria-hidden="true"></i>At least 8 characters</li>
+              <li data-rule="uppercase"><i class="bi bi-circle" aria-hidden="true"></i>One uppercase letter</li>
+              <li data-rule="lowercase"><i class="bi bi-circle" aria-hidden="true"></i>One lowercase letter</li>
+              <li data-rule="number"><i class="bi bi-circle" aria-hidden="true"></i>One number</li>
+              <li data-rule="special"><i class="bi bi-circle" aria-hidden="true"></i>One special character</li>
+            </ul>
+            <div class="invalid-feedback">Password must be at least 8 characters and include an uppercase letter, a lowercase letter, a number, and a special character.</div>
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label" for="signupConfirmPassword">Confirm password</label>
+            <div class="auth-input-wrap has-toggle">
+              <i class="bi bi-lock-fill"></i>
+              <input class="form-control auth-input" type="password" id="signupConfirmPassword" name="confirmPassword" placeholder="Repeat your password" autocomplete="new-password" minlength="8" required>
+              <button class="auth-eye" type="button" data-password-toggle="signupConfirmPassword" aria-label="Show password" aria-pressed="false">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+            <div class="invalid-feedback">Passwords do not match.</div>
+          </div>
+
+          <div class="auth-terms">
+            <label class="auth-check">
+              <input type="checkbox" name="terms" required>
+              <span>I agree to Stackly's <a href="404.html">Terms of Service</a> and <a href="404.html">Privacy Policy</a>.</span>
+            </label>
+            <p class="auth-terms-error">Please accept the terms to continue.</p>
+          </div>
+
+          <button class="auth-submit" id="authSubmit" type="submit">
+            Create account <i class="bi bi-arrow-right"></i>
+          </button>
+
+          <div class="auth-divider">Already a member?</div>
+          <p class="auth-alt">Already have an account? <a href="login.html">Sign in</a></p>
+          <p class="auth-footnote"><i class="bi bi-shield-lock"></i> Your information is encrypted and never shared. This demo form routes you to the selected dashboard.</p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/field-validation.js"></script>
+  <script src="js/email-validation.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

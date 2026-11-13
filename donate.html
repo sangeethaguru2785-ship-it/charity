@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Give once or monthly — 96 cents of every dollar reaches the field. Secure checkout, instant tax-deductible receipts, full transparency.">
+  <meta property="og:title" content="Stackly — Donate">
+  <meta property="og:description" content="Turn generosity into clean water, classrooms and meals today.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav nav-dark" id="siteNav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Stackly — back to home">
+        <img class="brand-logo" src="images/logo.webp" alt="Stackly" width="107" height="44">
+      </a>
+      <div class="nav-quick-actions">
+        <a class="btn nav-login" href="login.html">Login <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="causes.html">Causes</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteers.html">Volunteers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn nav-login nav-login-mobile" href="login.html">Login <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></a>
+        <a href="404.html" class="btn btn-accent nav-cta btn-magnetic active" aria-current="page">Donate <i class="bi bi-heart-fill"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ================= HERO — cinematic full-bleed ================= -->
+    <section class="page-hero ph-cinema">
+      <div class="ph-bg" data-hero-clip>
+        <img src="images/photo-1497486751825-1233686d5d80-1920x1080.webp" width="1920" height="1080" alt="Community members joined together at a Stackly program" fetchpriority="high" decoding="async">
+      </div>
+      <div class="container ph-inner">
+        <nav class="breadcrumb-c" aria-label="Breadcrumb" data-hero>
+          <a href="index.html">Home</a><i class="bi bi-chevron-right"></i><strong>Donate</strong>
+        </nav>
+        <br>
+        <span class="eyebrow eyebrow-gold" data-hero><i class="bi bi-suit-heart-fill"></i> Give with confidence</span>
+        <h1 class="ph-title ph-title-light" data-hero>Generosity, <em>maximized</em></h1>
+        <p class="ph-sub ph-sub-light" data-hero>96 cents of every dollar reaches the field. Choose an amount, watch the impact line, checkout in under a minute.</p>
+        <div class="ph-actions" data-hero>
+          <a href="#widget" class="btn btn-accent btn-lg btn-magnetic">Choose your amount <i class="bi bi-heart-fill"></i></a>
+          <a href="#allocation" class="btn btn-ghost-light btn-lg btn-magnetic">Where money goes</a>
+        </div>
+        <div class="ph-stat-chips">
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-piggy-bank"></i><div><strong>96¢ per $1</strong><span>reaches the field</span></div></div>
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-patch-check"></i><div><strong>4-star</strong><span>Charity Navigator rated</span></div></div>
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-arrow-repeat"></i><div><strong>30-day</strong><span>refund policy</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUICK GIVE WIDGET ================= -->
+    <section class="section" id="widget">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-lightning-charge-fill"></i> Quick give</span>
+          <h2 class="section-title">Choose your <em>amount</em></h2>
+          <p class="section-sub">One-time or monthly — impact updates land in your inbox either way.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="donation-card" id="donationWidget" data-reveal="zoom">
+              <div class="freq-toggle" id="freqToggle" role="tablist" aria-label="Donation frequency">
+                <button type="button" class="active" data-freq="once" role="tab" aria-selected="true">One-time</button>
+                <button type="button" data-freq="monthly" role="tab" aria-selected="false">Monthly</button>
+                <span class="freq-slider" aria-hidden="true"></span>
+              </div>
+
+              <div class="amount-grid" id="amountGrid">
+                <button type="button" data-amount="10">$10</button>
+                <button type="button" class="active" data-amount="25">$25</button>
+                <button type="button" data-amount="50">$50</button>
+                <button type="button" data-amount="100">$100</button>
+                <input type="number" id="customAmount" placeholder="Custom amount" min="1" step="1" inputmode="numeric" aria-label="Custom donation amount" data-validate="digits">
+              </div>
+
+              <p class="impact-line" id="impactLine"><i class="bi bi-heart-fill"></i> <strong>$25</strong> gives a family clean drinking water for a month</p>
+
+              <button type="button" class="btn btn-accent btn-lg w-100 btn-magnetic" id="donateBtn">Donate $25 now <i class="bi bi-arrow-right"></i></button>
+              <p class="secure-note"><i class="bi bi-shield-check"></i> 256-bit secure checkout &nbsp;·&nbsp; Cancel anytime</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TIERS ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-signpost-split-fill"></i> What amounts do</span>
+          <h2 class="section-title">Pick a tier, <em>or forge your own</em></h2>
+          <p class="section-sub">Suggested giving levels based on median field costs — every tier funds a complete unit of good.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3" data-stagger>
+            <article class="tier-card">
+              <h3 class="tier-amount">$25</h3>
+              <p>Hydrator</p>
+              <ul class="tier-list">
+                <li><i class="bi bi-droplet-fill"></i> Clean water for a family, one month</li>
+                <li><i class="bi bi-receipt"></i> Instant email receipt</li>
+                <li><i class="bi bi-graph-up"></i> Impact dashboard access</li>
+              </ul>
+              <button type="button" class="btn btn-outline-primary btn-magnetic w-100" data-tier="25">Give $25</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3" data-stagger>
+            <article class="tier-card featured">
+              <span class="tier-flag"><i class="bi bi-star-fill"></i> Most popular</span>
+              <h3 class="tier-amount">$50</h3>
+              <p>Educator</p>
+              <ul class="tier-list">
+                <li><i class="bi bi-book-fill"></i> School kit for 5 children</li>
+                <li><i class="bi bi-geo-alt-fill"></i> GPS-pinned project report</li>
+                <li><i class="bi bi-envelope-paper-fill"></i> Quarterly field letters</li>
+              </ul>
+              <button type="button" class="btn btn-accent btn-magnetic w-100" data-tier="50">Give $50</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3" data-stagger>
+            <article class="tier-card">
+              <h3 class="tier-amount">$100</h3>
+              <p>Nourisher</p>
+              <ul class="tier-list">
+                <li><i class="bi bi-basket-fill"></i> Weekend food for 20 families</li>
+                <li><i class="bi bi-camera-fill"></i> Photo updates from your region</li>
+                <li><i class="bi bi-graph-up"></i> Impact dashboard access</li>
+              </ul>
+              <button type="button" class="btn btn-outline-primary btn-magnetic w-100" data-tier="100">Give $100</button>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3" data-stagger>
+            <article class="tier-card">
+              <h3 class="tier-amount">$250</h3>
+              <p>Builder</p>
+              <ul class="tier-list">
+                <li><i class="bi bi-house-heart-fill"></i> One week of shelter upkeep</li>
+                <li><i class="bi bi-people-fill"></i> Named on the builders wall</li>
+                <li><i class="bi bi-calendar-event-fill"></i> Invite to donor field trips</li>
+              </ul>
+              <button type="button" class="btn btn-outline-primary btn-magnetic w-100" data-tier="250">Give $250</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ALLOCATION ================= -->
+    <section class="section section-alt" id="allocation">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-reveal="left">
+            <span class="eyebrow"><i class="bi bi-pie-chart-fill"></i> Where money moves</span>
+            <h2 class="section-title">Every dollar, <em>tracked to the hour</em></h2>
+            <p class="section-sub">Audited annually by Grant &amp; Lowe LLP. The 2025 audit and IRS Form 990 are public — links below, no email-wall.</p>
+            <div class="alloc-wrap">
+              <div class="alloc-row">
+                <div class="alloc-head"><span><i class="bi bi-geo-alt-fill"></i> Field programs</span><strong>86.2%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-progress="86.2" role="progressbar" aria-label="Field programs spending" style="--w:86.2%"></div></div>
+              </div>
+              <div class="alloc-row">
+                <div class="alloc-head"><span><i class="bi bi-megaphone-fill"></i> Awareness &amp; fundraising</span><strong>9.8%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-progress="9.8" role="progressbar" aria-label="Fundraising spending" style="--w:9.8%"></div></div>
+              </div>
+              <div class="alloc-row">
+                <div class="alloc-head"><span><i class="bi bi-building"></i> Operations</span><strong>4.0%</strong></div>
+                <div class="progress-track"><div class="progress-fill" data-progress="4" role="progressbar" aria-label="Operations spending" style="--w:4%"></div></div>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#" class="btn btn-ghost btn-magnetic"><i class="bi bi-file-earmark-pdf-fill"></i> 2025 Audit (PDF)</a>
+              <a href="#" class="btn btn-ghost btn-magnetic"><i class="bi bi-file-earmark-text-fill"></i> Form 990</a>
+            </div>
+          </div>
+          <div class="col-lg-6" data-reveal="right">
+            <div class="img-mask">
+              <img src="images/photo-1559027615-cd4628902d4a-800x600.webp" width="800" height="600" alt="Volunteers joining hands over a well" loading="lazy" decoding="async">
+              <div class="float-card glass">
+                <i class="bi bi-check2-circle"></i>
+                <strong>96¢</strong><span>of every $1 reaches the field</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MONTHLY / TRANSPARENCY ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-arrow-repeat"></i> The monthly muscle</span>
+          <h2 class="section-title">Why recurring donors <em>run this place</em></h2>
+          <p class="section-sub">Monthly gifts let us promise communities multi-year programs — wells don't care about fundraising cycles.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4" data-stagger>
+            <article class="info-card">
+              <i class="bi bi-graph-up-arrow"></i>
+              <h3>Predictable good</h3>
+              <p>Recurring revenue funds 71% of all programs, letting field teams plan in years instead of weeks.</p>
+            </article>
+          </div>
+          <div class="col-md-4" data-stagger>
+            <article class="info-card">
+              <i class="bi bi-sliders"></i>
+              <h3>You stay in control</h3>
+              <p>Pause, change amounts or cancel in two clicks from any receipt email. No phone calls, no guilt trips.</p>
+            </article>
+          </div>
+          <div class="col-md-4" data-stagger>
+            <article class="info-card">
+              <i class="bi bi-cash-coin"></i>
+              <h3>Matching magic</h3>
+              <p>Our board matches the first three months of every new monthly gift — your $25 works like $100.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-question-circle-fill"></i> Before you give</span>
+          <h2 class="section-title">Fair questions, <em>straight answers</em></h2>
+        </div>
+        <div class="faq-wrap">
+          <div class="faq-item" data-reveal="up">
+            <button class="faq-q collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+              <span>Is my donation tax-deductible?</span><i class="bi bi-plus-lg"></i>
+            </button>
+            <div class="collapse faq-a-wrap" id="faq1" data-bs-parent=".faq-wrap">
+              <div class="faq-a">Yes. Stackly Foundation is a registered 501(c)(3) non-profit (EIN 55-0120486). US taxpayers deduct gifts to the fullest extent of law; receipts land in your inbox within minutes.</div>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal="up" data-delay="0.1">
+            <button class="faq-q collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              <span>What payment methods do you accept?</span><i class="bi bi-plus-lg"></i>
+            </button>
+            <div class="collapse faq-a-wrap" id="faq2" data-bs-parent=".faq-wrap">
+              <div class="faq-a">All major cards, Apple Pay, Google Pay, PayPal and ACH bank transfer. Crypto gifts are accepted through our partner portal — email <a href="mailto:giving@stackly.org">giving@stackly.org</a> for a receiving address.</div>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal="up" data-delay="0.2">
+            <button class="faq-q collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              <span>Can I direct my gift to a specific cause?</span><i class="bi bi-plus-lg"></i>
+            </button>
+            <div class="collapse faq-a-wrap" id="faq3" data-bs-parent=".faq-wrap">
+              <div class="faq-a">Absolutely — add the cause in the checkout note field, or <a href="causes.html">browse causes</a> and give directly from a cause card. Undirected gifts go where the need dashboard says they're needed most.</div>
+            </div>
+          </div>
+          <div class="faq-item" data-reveal="up" data-delay="0.3">
+            <button class="faq-q collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+              <span>What if I need a refund?</span><i class="bi bi-plus-lg"></i>
+            </button>
+            <div class="collapse faq-a-wrap" id="faq4" data-bs-parent=".faq-wrap">
+              <div class="faq-a">Email <a href="mailto:giving@stackly.org">giving@stackly.org</a> within 30 days and we reverse the charge, no interrogation. Refunds settle back to your original payment method in 5–10 business days.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band" data-reveal="zoom">
+          <span class="eyebrow eyebrow-gold"><i class="bi bi-suit-heart-fill"></i> One minute of your day</span>
+          <h2 class="cta-title">A lifetime of <em>their tomorrow</em></h2>
+          <p class="cta-sub">Prefer to give time instead of money? The field teams are waiting for you too.</p>
+          <div class="cta-actions">
+            <a href="#widget" class="btn btn-accent btn-lg btn-magnetic">Donate now <i class="bi bi-heart-fill"></i></a>
+            <a href="volunteers.html" class="btn btn-ghost-light btn-lg btn-magnetic">Volunteer instead <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 footer-col" data-stagger>
+          <a class="navbar-brand footer-brand" href="index.html" aria-label="Stackly — back to home">
+            <img class="footer-logo" src="images/logo.webp" alt="Stackly" width="93" height="38">
+          </a>
+          <p class="footer-blurb">A global community turning compassion into measurable impact since 2012. Registered 501(c)(3) non-profit organization.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col" data-stagger>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="404.html">Home</a></li>
+            <li><a href="404.html">About us</a></li>
+            <li><a href="404.html">Our causes</a></li>
+            <li><a href="404.html">Upcoming events</a></li>
+            <li><a href="404.html">Gallery</a></li>
+            <li><a href="404.html">Volunteers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col" data-stagger>
+          <h3 class="footer-title">Causes</h3>
+          <ul class="footer-links">
+            <li><a href="404.html">Clean water</a></li>
+            <li><a href="404.html">Education</a></li>
+            <li><a href="404.html">Zero hunger</a></li>
+            <li><a href="404.html">Healthcare</a></li>
+            <li><a href="404.html">Safe shelter</a></li>
+            <li><a href="404.html">Animal rescue</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 footer-col" data-stagger>
+          <h3 class="footer-title">Stay in the loop</h3>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill"></i> 24 Giving Lane, Springfield, IL 62701</li>
+            <li><i class="bi bi-telephone-fill"></i> <a href="404.html">+1 (555) 013-2048</a></li>
+            <li><i class="bi bi-envelope-fill"></i> <a href="404.html">hello@stackly.org</a></li>
+          </ul>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-accent" aria-label="Subscribe"><i class="bi bi-send-fill"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Stackly Foundation. Made with <i class="bi bi-heart-fill"></i> for humanity.</p>
+        <div class="footer-legal">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Use</a>
+          <a href="404.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING UI ================= -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 44 44" aria-hidden="true">
+      <circle class="ring-bg" cx="22" cy="22" r="19"></circle>
+      <circle class="ring-fill" cx="22" cy="22" r="19"></circle>
+    </svg>
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="toast-custom" id="siteToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" id="toastIcon"></i>
+    <span id="toastMsg">Done!</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/field-validation.js"></script>
+  <script src="js/email-validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Marathons, galas, volunteer days and concerts — show up, have fun and change lives. Reserve your spot at the next Stackly event.">
+  <meta property="og:title" content="Stackly — Upcoming Events">
+  <meta property="og:description" content="Show up. Change lives. Runs, galas, volunteer days and more.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav nav-dark" id="siteNav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Stackly — back to home">
+        <img class="brand-logo" src="images/logo.webp" alt="Stackly" width="107" height="44">
+      </a>
+      <div class="nav-quick-actions">
+        <a class="btn nav-login" href="login.html">Login <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="causes.html">Causes</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteers.html">Volunteers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn nav-login nav-login-mobile" href="login.html">Login <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></a>
+        <a href="404.html" class="btn btn-accent nav-cta btn-magnetic">Donate <i class="bi bi-heart-fill"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ================= HERO — cinematic full-bleed + countdown ================= -->
+    <section class="page-hero ph-cinema ph-events">
+      <div class="ph-bg" data-hero-clip>
+        <img src="images/p4.webp" width="678" height="452" alt="Stackly supporters gathered at a community event" fetchpriority="high" decoding="async">
+      </div>
+      <div class="container ph-inner">
+        <nav class="breadcrumb-c" aria-label="Breadcrumb" data-hero>
+          <a href="index.html">Home</a><i class="bi bi-chevron-right"></i><strong>Events</strong>
+        </nav>
+        <br>
+        <span class="eyebrow eyebrow-gold" data-hero><i class="bi bi-calendar-heart-fill"></i> Upcoming events</span>
+        <h1 class="ph-title ph-title-light" data-hero>Show up.<br><em>Change lives.</em></h1>
+        <p class="ph-sub ph-sub-light" data-hero>Marathons, galas, tree-planting days and concerts — every Stackly event funds a verified project and ends with photos of exactly what you made possible.</p>
+        <div class="ph-actions" data-hero>
+          <a href="404.html" class="btn btn-accent btn-lg btn-magnetic">Featured event <i class="bi bi-star-fill"></i></a>
+          <a href="404.html" class="btn btn-ghost-light btn-lg btn-magnetic">Full schedule <i class="bi bi-arrow-down"></i></a>
+        </div>
+        <div class="ph-stat-chips">
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-calendar-event"></i><div><strong>38 events</strong><span>scheduled this year</span></div></div>
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-people"></i><div><strong>64K+ attendees</strong><span>across all events</span></div></div>
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-cash-coin"></i><div><strong>$1.1M raised</strong><span>at events in 2025</span></div></div>
+        </div>
+      </div>
+
+      <div class="countdown-card glass" data-countdown="2026-12-12T08:00:00" data-hero-pop>
+        <span class="cd-label"><i class="bi bi-alarm-fill"></i> Hope Run 10K starts in</span>
+        <div class="countdown-grid">
+          <div class="cd-box"><span class="cd-num" data-cd-d>00</span><span class="cd-lab">Days</span></div>
+          <div class="cd-box"><span class="cd-num" data-cd-h>00</span><span class="cd-lab">Hours</span></div>
+          <div class="cd-box"><span class="cd-num" data-cd-m>00</span><span class="cd-lab">Mins</span></div>
+          <div class="cd-box"><span class="cd-num" data-cd-s>00</span><span class="cd-lab">Secs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED EVENT ================= -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="featured-event" data-reveal="zoom">
+          <div class="fe-media">
+            <img src="images/photo-1469571486292-0ba58a3f068b-900x640.webp" width="900" height="640" alt="Runners and volunteers at an outdoor charity run" loading="lazy" decoding="async">
+            <div class="event-date"><span class="month">DEC</span><span class="day">12</span></div>
+          </div>
+          <div class="fe-body">
+            <span class="chip chip-gold"><i class="bi bi-star-fill"></i> Featured fundraiser</span>
+            <h2>Hope Run 10K Marathon</h2>
+            <p>Lace up for clean water. Every registration funds household filtration systems in the Sylhet region — and this year we're doubling it: 100% of entry fees become filters, matched dollar-for-dollar by our board.</p>
+            <p class="event-meta">
+              <i class="bi bi-geo-alt-fill"></i> Central Park, New York
+              <span class="dot-sep"></span>
+              <i class="bi bi-clock-fill"></i> 8:00 AM
+              <span class="dot-sep"></span>
+              <i class="bi bi-people-fill"></i> 2,400 runners registered
+            </p>
+            <div class="cause-progress">
+              <div class="progress-meta">
+                <span><strong data-count="85000" data-prefix="$">$0</strong> raised</span>
+                <span>Goal <strong>$110,000</strong></span>
+              </div>
+              <div class="progress-track"><span class="progress-fill" data-progress="78"></span></div>
+            </div>
+            <div class="ph-actions" style="margin-top:1.4rem">
+              <a href="404.html" class="btn btn-accent btn-lg btn-magnetic">Reserve your spot <i class="bi bi-arrow-right"></i></a>
+              <a href="404.html" class="btn btn-ghost btn-lg btn-magnetic">Sponsor the run</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SCHEDULE ================= -->
+    <section class="section section-alt" id="schedule">
+      <div class="container">
+        <div class="events-head" data-reveal="up">
+          <div>
+            <span class="eyebrow"><i class="bi bi-calendar3-fill"></i> The 2027 line-up</span>
+            <h2 class="section-title mb-0">Mark your <em>calendar</em></h2>
+          </div>
+          <a href="404.html" class="btn btn-ghost btn-magnetic">Host an event with us <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="events-list">
+          <div class="event-card" data-stagger>
+            <div class="event-date alt"><span class="month">DEC</span><span class="day">20</span></div>
+            <div class="event-body">
+              <span class="chip chip-sky">Volunteer day</span>
+              <h3>Holiday Meal Marathon</h3>
+              <p class="event-meta"><i class="bi bi-geo-alt-fill"></i> Detroit Community Kitchen <span class="dot-sep"></span> <i class="bi bi-clock-fill"></i> 10:00 AM</p>
+            </div>
+            <a href="404.html" class="btn btn-ghost event-cta btn-magnetic">Join the kitchen</a>
+          </div>
+
+          <div class="event-card" data-stagger>
+            <div class="event-date"><span class="month">JAN</span><span class="day">23</span></div>
+            <div class="event-body">
+              <span class="chip chip-emerald">Gala</span>
+              <h3>Gala for Good: Night of Hope</h3>
+              <p class="event-meta"><i class="bi bi-geo-alt-fill"></i> The Grand Ballroom, Chicago <span class="dot-sep"></span> <i class="bi bi-clock-fill"></i> 7:00 PM</p>
+            </div>
+            <a href="404.html" class="btn btn-ghost event-cta btn-magnetic">Reserve seat</a>
+          </div>
+
+          <div class="event-card" data-stagger>
+            <div class="event-date"><span class="month">FEB</span><span class="day">14</span></div>
+            <div class="event-body">
+              <span class="chip chip-sky">Volunteer day</span>
+              <h3>Plant 10,000 Trees</h3>
+              <p class="event-meta"><i class="bi bi-geo-alt-fill"></i> Riverside Community Park <span class="dot-sep"></span> <i class="bi bi-clock-fill"></i> 9:00 AM</p>
+            </div>
+            <a href="404.html" class="btn btn-ghost event-cta btn-magnetic">Get your gloves</a>
+          </div>
+
+          <div class="event-card" data-stagger>
+            <div class="event-date alt"><span class="month">MAR</span><span class="day">06</span></div>
+            <div class="event-body">
+              <span class="chip chip-emerald">Concert</span>
+              <h3>Voices for Water — Charity Concert</h3>
+              <p class="event-meta"><i class="bi bi-geo-alt-fill"></i> Austin Music Hall <span class="dot-sep"></span> <i class="bi bi-clock-fill"></i> 6:30 PM</p>
+            </div>
+            <a href="404.html" class="btn btn-ghost event-cta btn-magnetic">Buy tickets</a>
+          </div>
+
+          <div class="event-card" data-stagger>
+            <div class="event-date"><span class="month">APR</span><span class="day">10</span></div>
+            <div class="event-body">
+              <span class="chip chip-gold">Build weekend</span>
+              <h3>Animal Shelter Build</h3>
+              <p class="event-meta"><i class="bi bi-geo-alt-fill"></i> Denver Animal Rescue <span class="dot-sep"></span> <i class="bi bi-clock-fill"></i> 9:00 AM</p>
+            </div>
+            <a href="404.html" class="btn btn-ghost event-cta btn-magnetic">Grab a hammer</a>
+          </div>
+
+          <div class="event-card" data-stagger>
+            <div class="event-date alt"><span class="month">MAY</span><span class="day">22</span></div>
+            <div class="event-body">
+              <span class="chip chip-sky">Volunteer day</span>
+              <h3>Spring River Clean-Up</h3>
+              <p class="event-meta"><i class="bi bi-geo-alt-fill"></i> Willamette Riverbank, Portland <span class="dot-sep"></span> <i class="bi bi-clock-fill"></i> 8:30 AM</p>
+            </div>
+            <a href="404.html" class="btn btn-ghost event-cta btn-magnetic">Join the crew</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PAST HIGHLIGHTS ================= -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-award-fill"></i> Recent victories</span>
+          <h2 class="section-title">Moments from <em>past events</em></h2>
+          <p class="section-sub">A taste of what happens when a community shows up — full album lives in our gallery.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-stagger>
+            <figure class="hl-card">
+              <img src="images/photo-1523240795612-9a054b0db644-640x480.webp" width="640" height="480" alt="Students receiving back-to-school kits" loading="lazy" decoding="async">
+              <figcaption><strong>Back-to-School Drive 2026</strong><span>1,850 learning kits distributed</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4" data-stagger>
+            <figure class="hl-card">
+              <img src="images/photo-1469571486292-0ba58a3f068b-640x480.webp" width="640" height="480" alt="Volunteers cleaning a riverbank" loading="lazy" decoding="async">
+              <figcaption><strong>River Clean-Up 2026</strong><span>2.3 tons of waste removed</span></figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4" data-stagger>
+            <figure class="hl-card">
+              <img src="images/photo-1454165804606-c3d57bc86b40-640x480.webp" width="640" height="480" alt="Team celebrating after a successful gala" loading="lazy" decoding="async">
+              <figcaption><strong>Gala for Good 2025</strong><span>$420,000 raised for clean water</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOST A FUNDRAISER ================= -->
+    <section class="section section-alt" id="host">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <div class="img-mask" style="border-radius:var(--radius-lg);aspect-ratio:4/3;box-shadow:var(--shadow-soft)" data-reveal="clip">
+              <img src="images/photo-1556761175-5973dc0f32e7-760x570.webp" width="760" height="570" alt="A team planning a community fundraiser" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="section-header text-lg-start text-center mb-0" data-reveal="up">
+              <span class="eyebrow"><i class="bi bi-megaphone-fill"></i> Host your own</span>
+              <h2 class="section-title">Turn your birthday into <em>a water well</em></h2>
+              <p class="section-sub">Birthday fundraisers, workplace drives, school challenges — our team gives you the toolkit, the story and the receipts. You bring the people.</p>
+            </div>
+
+            <div class="steps-row row g-3 mt-2" data-reveal="up" data-delay="0.15">
+              <div class="col-md-4" data-stagger>
+                <div class="step-card" style="padding:1.5rem">
+                  <span class="step-icon"><i class="bi bi-lightbulb-fill"></i></span>
+                  <h3 style="font-size:1.05rem">1. Dream it</h3>
+                  <p style="font-size:0.88rem">Pick your cause and set a goal — even $500 changes a classroom.</p>
+                </div>
+              </div>
+              <div class="col-md-4" data-stagger>
+                <div class="step-card" style="padding:1.5rem">
+                  <span class="step-icon"><i class="bi bi-tools"></i></span>
+                  <h3 style="font-size:1.05rem">2. Get the kit</h3>
+                  <p style="font-size:0.88rem">We ship banners, photos, videos and a custom donation link.</p>
+                </div>
+              </div>
+              <div class="col-md-4" data-stagger>
+                <div class="step-card" style="padding:1.5rem">
+                  <span class="step-icon"><i class="bi bi-camera-fill"></i></span>
+                  <h3 style="font-size:1.05rem">3. See the proof</h3>
+                  <p style="font-size:0.88rem">After the event, photos and GPS pins of what your crowd funded.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="404.html" class="btn btn-accent btn-lg btn-magnetic mt-4" data-reveal="up" data-delay="0.25">Start a fundraiser <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band" data-reveal="zoom">
+          <span class="eyebrow eyebrow-gold"><i class="bi bi-ticket-perforated-fill"></i> Can't make it in person?</span>
+          <h2 class="cta-title">Fuel the mission <em>from anywhere</em></h2>
+          <p class="cta-sub">Every event exists to fund programs — but you don't need running shoes to change a life. A donation works at any pace.</p>
+          <div class="cta-actions">
+            <a href="404.html" class="btn btn-accent btn-lg btn-magnetic">Donate now <i class="bi bi-heart-fill"></i></a>
+            <a href="404.html" class="btn btn-ghost-light btn-lg btn-magnetic">See past events <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 footer-col" data-stagger>
+          <a class="navbar-brand footer-brand" href="index.html" aria-label="Stackly — back to home">
+            <img class="footer-logo" src="images/logo.webp" alt="Stackly" width="93" height="38">
+          </a>
+          <p class="footer-blurb">A global community turning compassion into measurable impact since 2012. Registered 501(c)(3) non-profit organization.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col" data-stagger>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="404.html">Home</a></li>
+            <li><a href="404.html">About us</a></li>
+            <li><a href="404.html">Our causes</a></li>
+            <li><a href="404.html">Upcoming events</a></li>
+            <li><a href="404.html">Gallery</a></li>
+            <li><a href="404.html">Volunteers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col" data-stagger>
+          <h3 class="footer-title">Causes</h3>
+          <ul class="footer-links">
+            <li><a href="404.html">Clean water</a></li>
+            <li><a href="404.html">Education</a></li>
+            <li><a href="404.html">Zero hunger</a></li>
+            <li><a href="404.html">Healthcare</a></li>
+            <li><a href="404.html">Safe shelter</a></li>
+            <li><a href="404.html">Animal rescue</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 footer-col" data-stagger>
+          <h3 class="footer-title">Stay in the loop</h3>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill"></i> 24 Giving Lane, Springfield, IL 62701</li>
+            <li><i class="bi bi-telephone-fill"></i> <a href="404.html">+1 (555) 013-2048</a></li>
+            <li><i class="bi bi-envelope-fill"></i> <a href="404.html">hello@stackly.org</a></li>
+          </ul>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-accent" aria-label="Subscribe"><i class="bi bi-send-fill"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Stackly Foundation. Made with <i class="bi bi-heart-fill"></i> for humanity.</p>
+        <div class="footer-legal">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Use</a>
+          <a href="404.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING UI ================= -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 44 44" aria-hidden="true">
+      <circle class="ring-bg" cx="22" cy="22" r="19"></circle>
+      <circle class="ring-fill" cx="22" cy="22" r="19"></circle>
+    </svg>
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="toast-custom" id="siteToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" id="toastIcon"></i>
+    <span id="toastMsg">Done!</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/email-validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

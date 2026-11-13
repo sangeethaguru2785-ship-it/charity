@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Donations — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Stackly admin donations — review gifts, payment methods and donation statuses.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body class="dash-body" data-dashboard="admin">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Admin dashboard navigation">
+    <div class="dash-brand">
+      <a href="index.html" aria-label="Stackly — back to home">
+        <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" type="button" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Workspace</span>
+      <a class="dash-nav-link" href="admin-dashboard.html"><i class="bi bi-grid-1x2-fill"></i> Overview</a>
+      <a class="dash-nav-link" href="admin-analytics.html"><i class="bi bi-graph-up-arrow"></i> Analytics</a>
+      <a class="dash-nav-link active" href="admin-donations.html" aria-current="page"><i class="bi bi-cash-stack"></i> Donations <span class="dash-nav-badge">12</span></a>
+      <a class="dash-nav-link" href="admin-campaigns.html"><i class="bi bi-megaphone-fill"></i> Campaigns</a>
+      <span class="dash-nav-label">Manage</span>
+      <a class="dash-nav-link" href="admin-causes.html"><i class="bi bi-heart-fill"></i> Causes</a>
+      <a class="dash-nav-link" href="admin-volunteers.html"><i class="bi bi-people-fill"></i> Volunteers</a>
+      <a class="dash-nav-link" href="admin-events.html"><i class="bi bi-calendar-heart-fill"></i> Events</a>
+      <span class="dash-nav-label">Account</span>
+      <a class="dash-nav-link" href="admin-settings.html"><i class="bi bi-sliders2"></i> Settings</a>
+      <a class="dash-nav-link" href="admin-support.html"><i class="bi bi-life-preserver"></i> Help & support</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <div class="dash-side-actions">
+        <a class="dash-side-btn" href="index.html"><i class="bi bi-house-door-fill"></i> Go to Home</a>
+        <a class="dash-side-btn dash-side-btn-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-header">
+      <button class="dash-menu-btn" id="dashMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dashSidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="dash-head-title">
+        <h1>Donations</h1>
+        <p>Gift management &middot; <span>November 2026</span></p>
+      </div>
+
+      <div class="dash-head-actions">
+        <div class="dropdown">
+          <button class="dash-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+            <span class="avatar avatar-gold">AM</span>
+            <span class="dash-profile-meta"><strong>Amara Mensah</strong><span>Admin</span></span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dash-dropdown">
+            <li><a class="dropdown-item" href="admin-settings.html"><i class="bi bi-person-fill"></i>My profile</a></li>
+            <li><a class="dropdown-item" href="admin-settings.html"><i class="bi bi-gear-fill"></i>Account settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door-fill"></i>Go to Home</a></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content" id="main">
+      <div class="dash-page-head">
+        <div>
+          <h2>Donations</h2>
+          <p>Review every gift, reconcile payment methods and follow the status of incoming donations.</p>
+        </div>
+        <div class="dash-page-actions"><a class="dash-btn dash-btn-light" href="404.html"><i class="bi bi-download"></i> Export CSV</a></div>
+      </div>
+      <section class="stat-grid cols-4" aria-label="Section statistics">
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-emerald"><i class="bi bi-cash-stack"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 12.4%</span>
+          </div>
+          <span class="stat-card-label">Total donations</span>
+          <strong class="stat-card-value">$248,920</strong>
+          <span class="stat-card-note">3,648 completed gifts</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-gold"><i class="bi bi-hourglass-split"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 18</span>
+          </div>
+          <span class="stat-card-label">Pending</span>
+          <strong class="stat-card-value">$12,480</strong>
+          <span class="stat-card-note">Awaiting bank confirmation</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-rose"><i class="bi bi-arrow-counterclockwise"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 6</span>
+          </div>
+          <span class="stat-card-label">Refunded</span>
+          <strong class="stat-card-value">$3,240</strong>
+          <span class="stat-card-note">0.9% of total volume</span>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-sky"><i class="bi bi-receipt"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 4.6%</span>
+          </div>
+          <span class="stat-card-label">Average gift</span>
+          <strong class="stat-card-value">$68.20</strong>
+          <span class="stat-card-note">Up from $65.18 last month</span>
+        </article>
+      </section>
+      <form class="filter-bar" action="404.html" method="get" aria-label="Filter donations">
+        <select class="form-select" aria-label="Filter by campaign">
+          <option>All campaigns</option>
+          <option>Clean Water for Bongo</option>
+          <option>Dhaka School Fund</option>
+          <option>Mobile Health Clinic</option>
+        </select>
+        <select class="form-select" aria-label="Filter by method">
+          <option>All methods</option>
+          <option>Card</option>
+          <option>Bank transfer</option>
+          <option>PayPal</option>
+        </select>
+        <select class="form-select" aria-label="Filter by status">
+          <option>All statuses</option>
+          <option>Completed</option>
+          <option>Pending</option>
+          <option>Failed</option>
+        </select>
+        <button class="dash-btn dash-btn-outline dash-btn-sm" type="submit"><i class="bi bi-funnel"></i> Apply filters</button>
+      </form>
+      <section class="dash-section" aria-labelledby="donationVolumeTitle">
+        <div class="dash-section-head">
+          <div>
+            <h2 id="donationVolumeTitle">Donation volume</h2>
+            <p>Gift totals and payment method mix</p>
+          </div>
+          <span class="dash-chip emerald"><i class="bi bi-check2-circle"></i> Reconciled today</span>
+        </div>
+        <div class="chart-grid">
+          <article class="dash-card chart-card">
+            <div class="chart-card-head">
+              <div>
+                <h3>Donation overview</h3>
+                <p>Total gifts received over time</p>
+              </div>
+              <div class="dash-tabs" data-range-target="adminDonationChart" role="group" aria-label="Donation volume range">
+                <button class="dash-tab" type="button" data-range="7">7D</button>
+                <button class="dash-tab active" type="button" data-range="30">30D</button>
+                <button class="dash-tab" type="button" data-range="12">12M</button>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="adminDonationChart" role="img" aria-label="Donation volume range"></canvas>
+            </div>
+          </article>
+          <article class="dash-card chart-card">
+            <div class="chart-card-head">
+              <div>
+                <h3>Payment method mix</h3>
+                <p>Share of completed gifts</p>
+              </div>
+            </div>
+            <div class="dash-card-body">
+              <div class="mix-row"><div class="mix-row-top"><span>Card</span><strong>58%</strong></div><div class="dash-progress"><span style="width:58%"></span></div></div>
+              <div class="mix-row"><div class="mix-row-top"><span>Bank transfer</span><strong>22%</strong></div><div class="dash-progress gold"><span style="width:22%"></span></div></div>
+              <div class="mix-row"><div class="mix-row-top"><span>PayPal</span><strong>12%</strong></div><div class="dash-progress"><span style="width:12%"></span></div></div>
+              <div class="mix-row"><div class="mix-row-top"><span>Digital wallet</span><strong>8%</strong></div><div class="dash-progress"><span style="width:8%"></span></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="dash-card table-card" aria-labelledby="allDonationsTitle">
+        <div class="card-head">
+          <div>
+            <h3 id="allDonationsTitle">All donations</h3>
+            <p>Most recent gifts across every campaign</p>
+          </div>
+          <span class="dash-chip gold">12 today</span>
+        </div>
+        <div class="table-responsive">
+          <table class="dash-table">
+            <thead>
+              <tr><th scope="col">Donor</th><th scope="col">Campaign</th><th scope="col">Amount</th><th scope="col">Method</th><th scope="col">Status</th><th scope="col">Date</th><th scope="col">Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-emerald">SM</span><div><strong>Sarah Mitchell</strong><span>sarah.m@email.com</span></div></div></td><td>Clean Water for Bongo</td><td class="cell-strong">$250</td><td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Card</span></td><td><span class="status-badge status-completed">Completed</span></td><td class="cell-muted">Nov 12, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-sky">DC</span><div><strong>David Chen</strong><span>david.c@northwind.com</span></div></div></td><td>Dhaka School Fund</td><td class="cell-strong">$1,000</td><td><span class="method-cell"><i class="bi bi-bank"></i> Bank</span></td><td><span class="status-badge status-completed">Completed</span></td><td class="cell-muted">Nov 12, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-rose">AO</span><div><strong>Amara Okafor</strong><span>amara.o@email.com</span></div></div></td><td>Mobile Health Clinic</td><td class="cell-strong">$75</td><td><span class="method-cell"><i class="bi bi-paypal"></i> PayPal</span></td><td><span class="status-badge status-pending">Pending</span></td><td class="cell-muted">Nov 11, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-violet">JC</span><div><strong>James Carter</strong><span>james.c@email.com</span></div></div></td><td>Zero Hunger Boxes</td><td class="cell-strong">$120</td><td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Card</span></td><td><span class="status-badge status-completed">Completed</span></td><td class="cell-muted">Nov 11, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-gold">PS</span><div><strong>Priya Sharma</strong><span>priya.s@email.com</span></div></div></td><td>Animal Rescue Fund</td><td class="cell-strong">$50</td><td><span class="method-cell"><i class="bi bi-apple"></i> Apple Pay</span></td><td><span class="status-badge status-completed">Completed</span></td><td class="cell-muted">Nov 10, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-emerald">LM</span><div><strong>Lucas Meyer</strong><span>lucas.m@email.com</span></div></div></td><td>Clean Water for Bongo</td><td class="cell-strong">$300</td><td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Card</span></td><td><span class="status-badge status-failed">Failed</span></td><td class="cell-muted">Nov 10, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-sky">NB</span><div><strong>Nadia Bello</strong><span>nadia.b@email.com</span></div></div></td><td>Dhaka School Fund</td><td class="cell-strong">$180</td><td><span class="method-cell"><i class="bi bi-bank"></i> Bank</span></td><td><span class="status-badge status-completed">Completed</span></td><td class="cell-muted">Nov 9, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+              <tr><td><div class="donor-cell"><span class="avatar avatar-rose">EK</span><div><strong>Elena Kovacs</strong><span>elena.k@email.com</span></div></div></td><td>Mobile Health Clinic</td><td class="cell-strong">$95</td><td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Card</span></td><td><span class="status-badge status-refunded">Refunded</span></td><td class="cell-muted">Nov 8, 2026</td><td><a class="dash-link" href="404.html">View</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="dash-toast" id="dashToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i><span>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

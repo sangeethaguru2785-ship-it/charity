@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Real people, real places, real progress — browse moments of change captured across Stackly's programs in 32 countries.">
+  <meta property="og:title" content="Stackly — Gallery of Impact">
+  <meta property="og:description" content="Hope, captured in action. Browse the faces and places your generosity built.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top site-nav nav-dark" id="siteNav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Stackly — back to home">
+        <img class="brand-logo" src="images/logo.webp" alt="Stackly" width="107" height="44">
+      </a>
+      <div class="nav-quick-actions">
+        <a class="btn nav-login" href="login.html">Login <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="causes.html">Causes</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="volunteers.html">Volunteers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn nav-login nav-login-mobile" href="login.html">Login <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i></a>
+        <a href="404.html" class="btn btn-accent nav-cta btn-magnetic">Donate <i class="bi bi-heart-fill"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ================= HERO — cinematic full-bleed ================= -->
+    <section class="page-hero ph-cinema">
+      <div class="ph-bg" data-hero-clip>
+        <img src="images/n6.webp" width="1000" height="749" alt="A moment captured from a Stackly program" fetchpriority="high" decoding="async">
+      </div>
+      <div class="container ph-inner">
+        <nav class="breadcrumb-c" aria-label="Breadcrumb" data-hero>
+          <a href="index.html">Home</a><i class="bi bi-chevron-right"></i><strong>Gallery</strong>
+        </nav>
+        <br>
+        <span class="eyebrow eyebrow-gold" data-hero><i class="bi bi-camera-fill"></i> Moments of change</span>
+        <h1 class="ph-title ph-title-light" data-hero>Hope, captured <em>in action</em></h1>
+        <p class="ph-sub ph-sub-light" data-hero>Real people, real places, real progress — every photo below is GPS-pinned, donor-funded and free of filters that lie. Tap any moment to step inside it.</p>
+        <div class="ph-actions" data-hero>
+          <a href="404.html" class="btn btn-accent btn-lg btn-magnetic">Browse the album <i class="bi bi-arrow-down"></i></a>
+          <a href="404.html" class="btn btn-ghost-light btn-lg btn-magnetic">Fund the next frame</a>
+        </div>
+        <div class="ph-stat-chips">
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-camera-fill"></i><div><strong>1,200+ photos</strong><span>from the field</span></div></div>
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-globe-americas"></i><div><strong>32 countries</strong><span>GPS-pinned locations</span></div></div>
+          <div class="ph-stat-chip glass" data-hero-pop><i class="bi bi-shield-check"></i><div><strong>100% real</strong><span>no stock, no filters</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FILTERABLE GALLERY ================= -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-images"></i> The full album</span>
+          <h2 class="section-title">Every picture, <em>a promise kept</em></h2>
+          <p class="section-sub">Filter by program — then open any frame full-screen. What you see is what donors built.</p>
+        </div>
+
+        <div class="filter-bar" data-filter-bar="#galleryGrid" data-reveal="up">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true"><i class="bi bi-asterisk"></i> All</button>
+          <button type="button" class="filter-btn" data-filter="water" aria-pressed="false"><i class="bi bi-droplet-fill"></i> Water</button>
+          <button type="button" class="filter-btn" data-filter="education" aria-pressed="false"><i class="bi bi-book-fill"></i> Education</button>
+          <button type="button" class="filter-btn" data-filter="food" aria-pressed="false"><i class="bi bi-basket-fill"></i> Food</button>
+          <button type="button" class="filter-btn" data-filter="health" aria-pressed="false"><i class="bi bi-heart-pulse-fill"></i> Health</button>
+          <button type="button" class="filter-btn" data-filter="community" aria-pressed="false"><i class="bi bi-people-fill"></i> Community</button>
+          <button type="button" class="filter-btn" data-filter="animals" aria-pressed="false"><i class="bi bi-heart-fill"></i> Animals</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <figure tabindex="0" role="button" class="gallery-item tall filterable" data-category="education" data-stagger data-caption="First day at the new Dhaka school" data-full="images/photo-1523240795612-9a054b0db644-1400.webp">
+            <img src="images/photo-1523240795612-9a054b0db644-600x760.webp" width="600" height="760" alt="Students studying together" loading="lazy" decoding="async">
+            <figcaption><span>First day at the new Dhaka school</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="food" data-stagger data-caption="Packing 10,000 weekend food boxes" data-full="images/photo-1593113598332-cd288d649433-1400.webp">
+            <img src="images/photo-1593113598332-cd288d649433-600x420.webp" width="600" height="420" alt="Volunteers packing food boxes" loading="lazy" decoding="async">
+            <figcaption><span>Packing 10,000 weekend food boxes</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item tall filterable" data-category="education" data-stagger data-caption="Hands up — attendance in Nairobi" data-full="images/photo-1577896851231-70ef18881754-1400.webp">
+            <img src="images/photo-1577896851231-70ef18881754-600x760.webp" width="600" height="760" alt="Children raising hands in class" loading="lazy" decoding="async">
+            <figcaption><span>Hands up — attendance in Nairobi</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="Volunteer huddle — Berlin chapter" data-full="images/photo-1517048676732-d65bc937f952-1400.webp">
+            <img src="images/photo-1517048676732-d65bc937f952-600x420.webp" width="600" height="420" alt="Volunteers in a team huddle" loading="lazy" decoding="async">
+            <figcaption><span>Volunteer huddle — Berlin chapter</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="water" data-stagger data-caption="First flow from the Bongo well — 2012" data-full="images/photo-1548839140-29a749e1cf4d-1400.webp">
+            <img src="images/photo-1548839140-29a749e1cf4d-600x420.webp" width="600" height="420" alt="Clean drinking water" loading="lazy" decoding="async">
+            <figcaption><span>First flow from the Bongo well — 2012</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="health" data-stagger data-caption="Mobile clinic day in Chittagong" data-full="images/photo-1576091160550-2173dba999ef-1400.webp">
+            <img src="images/photo-1576091160550-2173dba999ef-600x420.webp" width="600" height="420" alt="Doctor providing healthcare" loading="lazy" decoding="async">
+            <figcaption><span>Mobile clinic day in Chittagong</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="River clean-up — 2.3 tons removed" data-full="images/photo-1469571486292-0ba58a3f068b-1400.webp">
+            <img src="images/photo-1469571486292-0ba58a3f068b-600x420.webp" width="600" height="420" alt="Community clean-up volunteers" loading="lazy" decoding="async">
+            <figcaption><span>River clean-up — 2.3 tons removed</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="Planning next quarter's missions" data-full="images/photo-1454165804606-c3d57bc86b40-1400.webp">
+            <img src="images/photo-1454165804606-c3d57bc86b40-600x420.webp" width="600" height="420" alt="Team planning meeting" loading="lazy" decoding="async">
+            <figcaption><span>Planning next quarter's missions</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item tall filterable" data-category="education" data-stagger data-caption="Morning lesson, bright futures" data-full="images/photo-1509062522246-3755977927d7-1400.webp">
+            <img src="images/photo-1509062522246-3755977927d7-600x760.webp" width="600" height="760" alt="Children in a classroom" loading="lazy" decoding="async">
+            <figcaption><span>Morning lesson, bright futures</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="animals" data-stagger data-caption="Adoption day for 46 rescues" data-full="images/photo-1548199973-03cce0bbc87b-1400.webp">
+            <img src="images/photo-1548199973-03cce0bbc87b-600x420.webp" width="600" height="420" alt="Rescued dogs running" loading="lazy" decoding="async">
+            <figcaption><span>Adoption day for 46 rescues</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="health" data-stagger data-caption="Vaccination drive — Sylhet region" data-full="images/photo-1582213782179-e0d53f98f2ca-1400.webp">
+            <img src="images/photo-1582213782179-e0d53f98f2ca-600x420.webp" width="600" height="420" alt="Medical vaccination drive" loading="lazy" decoding="async">
+            <figcaption><span>Vaccination drive — Sylhet region</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item tall filterable" data-category="water" data-stagger data-caption="Hands that built the wellfield" data-full="images/photo-1559027615-cd4628902d4a-1400.webp">
+            <img src="images/photo-1559027615-cd4628902d4a-600x760.webp" width="600" height="760" alt="Hands joined together in unity" loading="lazy" decoding="async">
+            <figcaption><span>Hands that built the wellfield</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 01" data-full="images/n2.webp">
+            <img src="images/n2.webp" width="1280" height="640" alt="A moment from the full album, photo 01" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 01</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 02" data-full="images/n3.webp">
+            <img src="images/n3.webp" width="1920" height="1555" alt="A moment from the full album, photo 02" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 02</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 03" data-full="images/n4.webp">
+            <img src="images/n4.webp" width="1280" height="854" alt="A moment from the full album, photo 03" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 03</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 04" data-full="images/n5.webp">
+            <img src="images/n5.webp" width="800" height="600" alt="A moment from the full album, photo 04" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 04</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 05" data-full="images/n6.webp">
+            <img src="images/n6.webp" width="1000" height="749" alt="A moment from the full album, photo 05" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 05</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 06" data-full="images/n7.webp">
+            <img src="images/n7.webp" width="1600" height="1067" alt="A moment from the full album, photo 06" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 06</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 07" data-full="images/n8.webp">
+            <img src="images/n8.webp" width="612" height="408" alt="A moment from the full album, photo 07" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 07</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 08" data-full="images/n9.webp">
+            <img src="images/n9.webp" width="740" height="493" alt="A moment from the full album, photo 08" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 08</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 09" data-full="images/n10.webp">
+            <img src="images/n10.webp" width="800" height="533" alt="A moment from the full album, photo 09" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 09</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 10" data-full="images/p1.webp">
+            <img src="images/p1.webp" width="1024" height="579" alt="A moment from the full album, photo 10" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 10</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 11" data-full="images/p2.webp">
+            <img src="images/p2.webp" width="540" height="360" alt="A moment from the full album, photo 11" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 11</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 12" data-full="images/p3.webp">
+            <img src="images/p3.webp" width="547" height="365" alt="A moment from the full album, photo 12" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 12</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 13" data-full="images/p4.webp">
+            <img src="images/p4.webp" width="612" height="408" alt="A moment from the full album, photo 13" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 13</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 14" data-full="images/p5.webp">
+            <img src="images/p5.webp" width="740" height="494" alt="A moment from the full album, photo 14" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 14</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 15" data-full="images/c1.webp">
+            <img src="images/c1.webp" width="750" height="375" alt="A moment from the full album, photo 15" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 15</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+          <figure tabindex="0" role="button" class="gallery-item filterable" data-category="community" data-stagger data-caption="The full album — moment 16" data-full="images/c2.webp">
+            <img src="images/c2.webp" width="600" height="431" alt="A moment from the full album, photo 16" loading="lazy" decoding="async">
+            <figcaption><span>The full album — moment 16</span><i class="bi bi-arrows-fullscreen"></i></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY STATS ================= -->
+    <section class="stats-band" aria-label="The gallery in numbers">
+      <span class="stats-orb stats-orb-1" aria-hidden="true" data-speed="0.1"></span>
+      <span class="stats-orb stats-orb-2" aria-hidden="true" data-speed="-0.08"></span>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-lg-3 stat" data-reveal="up">
+            <span class="stat-icon"><i class="bi bi-camera-reel"></i></span>
+            <span class="stat-num"><span data-count="1200">0</span>+</span>
+            <span class="stat-label">Frames archived</span>
+          </div>
+          <div class="col-6 col-lg-3 stat" data-reveal="up" data-delay="0.1">
+            <span class="stat-icon"><i class="bi bi-globe-americas"></i></span>
+            <span class="stat-num"><span data-count="32">0</span></span>
+            <span class="stat-label">Countries documented</span>
+          </div>
+          <div class="col-6 col-lg-3 stat" data-reveal="up" data-delay="0.2">
+            <span class="stat-icon"><i class="bi bi-person-badge-fill"></i></span>
+            <span class="stat-num"><span data-count="74">0</span></span>
+            <span class="stat-label">Field photographers</span>
+          </div>
+          <div class="col-6 col-lg-3 stat" data-reveal="up" data-delay="0.3">
+            <span class="stat-icon"><i class="bi bi-shield-check"></i></span>
+            <span class="stat-num"><span data-count="100">0</span>%</span>
+            <span class="stat-label">Consent-first releases</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PHOTO STORIES ================= -->
+    <section class="section section-alt" id="stories">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-journal-richtext"></i> Behind the frame</span>
+          <h2 class="section-title">The stories <em>behind the photos</em></h2>
+          <p class="section-sub">A single frame can hold a whole year of work. Here are three moments that started something much bigger.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-stagger>
+            <article class="cause-card h-100">
+              <div class="cause-media">
+                <img src="images/photo-1548839140-29a749e1cf4d-640x420.webp" width="640" height="420" alt="Clean drinking water flowing from a well" loading="lazy" decoding="async">
+                <span class="chip chip-media"><i class="bi bi-droplet-fill"></i> Water</span>
+              </div>
+              <div class="cause-body">
+                <h3>The well that started everything</h3>
+                <p>Bongo, Ghana — 2012. The very first frame in this album, taken minutes after clean water reached the village for the first time.</p>
+                <a href="404.html" class="cause-link mt-auto">Read the water story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-stagger>
+            <article class="cause-card h-100">
+              <div class="cause-media">
+                <img src="images/photo-1509062522246-3755977927d7-640x420.webp" width="640" height="420" alt="Children learning in a classroom" loading="lazy" decoding="async">
+                <span class="chip chip-media"><i class="bi bi-book-fill"></i> Education</span>
+              </div>
+              <div class="cause-body">
+                <h3>A classroom under a mango tree</h3>
+                <p>Dhaka, Bangladesh — 2019. Forty-two students, one chalkboard, and a promise that no child would ever be turned away.</p>
+                <a href="404.html" class="cause-link mt-auto">Read the education story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-stagger>
+            <article class="cause-card h-100">
+              <div class="cause-media">
+                <img src="images/photo-1576091160550-2173dba999ef-640x420.webp" width="640" height="420" alt="Doctor caring for a patient at a mobile clinic" loading="lazy" decoding="async">
+                <span class="chip chip-media"><i class="bi bi-heart-pulse-fill"></i> Health</span>
+              </div>
+              <div class="cause-body">
+                <h3>The road that reaches everyone</h3>
+                <p>Chittagong, Bangladesh — 2023. A mobile clinic that turns a six-hour walk to the nearest hospital into a fifteen-minute wait.</p>
+                <a href="404.html" class="cause-link mt-auto">Read the health story <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TIMELINE ================= -->
+    <section class="section" id="journey">
+      <div class="container">
+        <div class="section-header text-center" data-reveal="up">
+          <span class="eyebrow"><i class="bi bi-signpost-split-fill"></i> Through the lens</span>
+          <h2 class="section-title">Fourteen years, <em>a thousand frames</em></h2>
+          <p class="section-sub">Follow the album from one village well to thirty-two countries — every milestone photographed as it happened.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="tl-item" data-reveal="up">
+            <span class="tl-dot"></span>
+            <div class="tl-card">
+              <div class="tl-year">2012</div>
+              <h3>One well, one camera</h3>
+              <p>The Bongo well is completed in Ghana and photographed the same afternoon — the first image in the Stackly archive.</p>
+            </div>
+          </div>
+          <div class="tl-item" data-reveal="up">
+            <span class="tl-dot"></span>
+            <div class="tl-card">
+              <div class="tl-year">2014</div>
+              <h3>100 wells, 100 frames</h3>
+              <p>The 100 Wells Challenge wraps across three countries. Each finished well gets a portrait of the community it serves.</p>
+            </div>
+          </div>
+          <div class="tl-item" data-reveal="up">
+            <span class="tl-dot"></span>
+            <div class="tl-card">
+              <div class="tl-year">2017</div>
+              <h3>Classrooms enter the album</h3>
+              <p>Education launches with 14 local ministries. The first Dhaka classroom photo is still one of the most shared images we have.</p>
+            </div>
+          </div>
+          <div class="tl-item" data-reveal="up">
+            <span class="tl-dot"></span>
+            <div class="tl-card">
+              <div class="tl-year">2021</div>
+              <h3>Clinics on the move</h3>
+              <p>Mobile health units reach communities the map used to forget, and the gallery gains its first clinic-day series.</p>
+            </div>
+          </div>
+          <div class="tl-item" data-reveal="up">
+            <span class="tl-dot"></span>
+            <div class="tl-card">
+              <div class="tl-year">2024</div>
+              <h3>The 1,000th frame</h3>
+              <p>A river clean-up in Portland becomes the thousandth photo archived — GPS-pinned, donor-funded and published the same day.</p>
+            </div>
+          </div>
+          <div class="tl-item" data-reveal="up">
+            <span class="tl-dot"></span>
+            <div class="tl-card">
+              <div class="tl-year">2026</div>
+              <h3>1,200 frames, 32 countries</h3>
+              <p>The album keeps growing, and every new frame still answers the same question: what did generosity build here?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PHOTO ETHICS ================= -->
+    <section class="section" id="promise">
+      <div class="container">
+        <div class="ph-dark-panel" data-reveal="zoom">
+          <span class="panel-deco panel-deco-1" aria-hidden="true"></span>
+          <span class="panel-deco panel-deco-2" aria-hidden="true"></span>
+          <div class="text-center position-relative" data-reveal="up">
+            <span class="eyebrow eyebrow-gold"><i class="bi bi-shield-check"></i> Our promise</span>
+            <h2 class="cta-title">Every face is <em>asked first</em></h2>
+            <p class="cta-sub">A photograph is a person's story before it is our fundraising. These are the rules our field teams never break.</p>
+          </div>
+          <div class="row g-4 position-relative">
+            <div class="col-lg-4" data-reveal="left">
+              <div class="mv-card glass h-100">
+                <span class="step-icon"><i class="bi bi-shield-check"></i></span>
+                <h3 class="donate-title">Consent before the click</h3>
+                <p class="donate-sub mb-0">No photo is taken or published without a signed release. Families can withdraw a frame at any time, no questions asked.</p>
+              </div>
+            </div>
+            <div class="col-lg-4" data-reveal="up" data-delay="0.1">
+              <div class="mv-card glass h-100">
+                <span class="step-icon"><i class="bi bi-camera-fill"></i></span>
+                <h3 class="donate-title">Nothing staged, nothing filtered</h3>
+                <p class="donate-sub mb-0">We don't direct smiles, move furniture or smooth reality. What you see is the field on an ordinary day.</p>
+              </div>
+            </div>
+            <div class="col-lg-4" data-reveal="right" data-delay="0.2">
+              <div class="mv-card glass h-100">
+                <span class="step-icon"><i class="bi bi-geo-alt-fill"></i></span>
+                <h3 class="donate-title">Context with every caption</h3>
+                <p class="donate-sub mb-0">Each frame carries a place, a date and the program behind it — so a picture can never be spun into a story it isn't.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUOTE ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="testimonial-stage">
+          <i class="bi bi-quote testi-quote" aria-hidden="true"></i>
+          <div class="testi-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          <blockquote class="testi-text" data-reveal="up">“Every photo in this gallery is a receipt. Not one of them would exist without someone deciding their Tuesday was worth someone else's lifetime.”</blockquote>
+          <div class="testi-author" data-reveal="up" data-delay="0.15">
+            <img src="images/photo-1547425260-76bcadfb4f2c-120x120.webp" width="56" height="56" alt="David Chen" loading="lazy" decoding="async">
+            <div><strong>David Chen</strong><span>CSR Lead, Northwind Group</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band" data-reveal="zoom">
+          <span class="eyebrow eyebrow-gold"><i class="bi bi-suit-heart-fill"></i> Be in the next frame</span>
+          <h2 class="cta-title">The next photo needs <em>a hero</em> — you</h2>
+          <p class="cta-sub">Fund a program, join a build weekend or simply share this gallery. Every action adds a frame.</p>
+          <div class="cta-actions">
+            <a href="404.html" class="btn btn-accent btn-lg btn-magnetic">Donate now <i class="bi bi-heart-fill"></i></a>
+            <a href="404.html" class="btn btn-ghost-light btn-lg btn-magnetic">Join a mission <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 footer-col" data-stagger>
+          <a class="navbar-brand footer-brand" href="index.html" aria-label="Stackly — back to home">
+            <img class="footer-logo" src="images/logo.webp" alt="Stackly" width="93" height="38">
+          </a>
+          <p class="footer-blurb">A global community turning compassion into measurable impact since 2012. Registered 501(c)(3) non-profit organization.</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col" data-stagger>
+          <h3 class="footer-title">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="404.html">Home</a></li>
+            <li><a href="404.html">About us</a></li>
+            <li><a href="404.html">Our causes</a></li>
+            <li><a href="404.html">Upcoming events</a></li>
+            <li><a href="404.html">Gallery</a></li>
+            <li><a href="404.html">Volunteers</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2 footer-col" data-stagger>
+          <h3 class="footer-title">Causes</h3>
+          <ul class="footer-links">
+            <li><a href="404.html">Clean water</a></li>
+            <li><a href="404.html">Education</a></li>
+            <li><a href="404.html">Zero hunger</a></li>
+            <li><a href="404.html">Healthcare</a></li>
+            <li><a href="404.html">Safe shelter</a></li>
+            <li><a href="404.html">Animal rescue</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 footer-col" data-stagger>
+          <h3 class="footer-title">Stay in the loop</h3>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill"></i> 24 Giving Lane, Springfield, IL 62701</li>
+            <li><i class="bi bi-telephone-fill"></i> <a href="404.html">+1 (555) 013-2048</a></li>
+            <li><i class="bi bi-envelope-fill"></i> <a href="404.html">hello@stackly.org</a></li>
+          </ul>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+            <button type="submit" class="btn btn-accent" aria-label="Subscribe"><i class="bi bi-send-fill"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Stackly Foundation. Made with <i class="bi bi-heart-fill"></i> for humanity.</p>
+        <div class="footer-legal">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Use</a>
+          <a href="404.html">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING UI ================= -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 44 44" aria-hidden="true">
+      <circle class="ring-bg" cx="22" cy="22" r="19"></circle>
+      <circle class="ring-fill" cx="22" cy="22" r="19"></circle>
+    </svg>
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <div class="toast-custom" id="siteToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill" id="toastIcon"></i>
+    <span id="toastMsg">Done!</span>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close viewer"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image"><i class="bi bi-arrow-left"></i></button>
+    <figure>
+      <img id="lightboxImg" src="" alt="Enlarged gallery image">
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image"><i class="bi bi-arrow-right"></i></button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/email-validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

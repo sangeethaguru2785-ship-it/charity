@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donor Dashboard — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Stackly donor dashboard — track your giving, supported campaigns, impact and donation receipts in one modern workspace.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body class="dash-body" data-dashboard="donor">
+  <a class="skip-link" href="404.html">Skip to content</a>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Donor dashboard navigation">
+    <div class="dash-brand">
+      <a href="index.html" aria-label="Stackly — back to home">
+        <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" type="button" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Workspace</span>
+      <a class="dash-nav-link active" href="donor-dashboard.html" aria-current="page"><i class="bi bi-grid-1x2-fill"></i> Overview</a>
+      <a class="dash-nav-link" href="donor-history.html"><i class="bi bi-clock-history"></i> Donation history</a>
+      <a class="dash-nav-link" href="donor-campaigns.html"><i class="bi bi-megaphone-fill"></i> Campaigns</a>
+      <a class="dash-nav-link" href="donor-receipts.html"><i class="bi bi-receipt"></i> Receipts</a>
+      <span class="dash-nav-label">Explore</span>
+      <a class="dash-nav-link" href="donor-causes.html"><i class="bi bi-heart-fill"></i> Causes</a>
+      <a class="dash-nav-link" href="donor-events.html"><i class="bi bi-calendar-heart-fill"></i> Events</a>
+      <a class="dash-nav-link" href="donor-gallery.html"><i class="bi bi-camera-fill"></i> Gallery</a>
+      <span class="dash-nav-label">Account</span>
+      <a class="dash-nav-link" href="donor-settings.html"><i class="bi bi-sliders2"></i> Settings</a>
+      <a class="dash-nav-link" href="donor-support.html"><i class="bi bi-life-preserver"></i> Help & support</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <div class="dash-side-actions">
+        <a class="dash-side-btn" href="index.html"><i class="bi bi-house-door-fill"></i> Go to Home</a>
+        <a class="dash-side-btn dash-side-btn-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-header">
+      <button class="dash-menu-btn" id="dashMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dashSidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="dash-head-title">
+        <h1>Donor dashboard</h1>
+        <p>Your giving at a glance &middot; <span>November 2026</span></p>
+      </div>
+
+      <div class="dash-head-actions">
+        <div class="dropdown">
+          <button class="dash-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+            <span class="avatar avatar-emerald">SM</span>
+            <span class="dash-profile-meta"><strong>Sarah Mitchell</strong><span>Gold donor</span></span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dash-dropdown">
+            <li><a class="dropdown-item" href="donor-settings.html"><i class="bi bi-person-fill"></i>My profile</a></li>
+            <li><a class="dropdown-item" href="donor-settings.html"><i class="bi bi-gear-fill"></i>Account settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door-fill"></i>Go to Home</a></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content" id="main">
+
+
+      <!-- ================= WELCOME ================= -->
+      <section class="dash-welcome" id="overview" aria-labelledby="donorWelcomeTitle">
+        <div>
+          <span class="dash-eyebrow"><i class="bi bi-award-fill"></i> Gold donor since 2019</span>
+          <h2 id="donorWelcomeTitle">Welcome back, <em>Sarah</em></h2>
+          <p>Your generosity has funded clean water, classrooms and healthcare across 6 countries. Here is the difference you have made this year.</p>
+          <div class="welcome-actions">
+            <a class="dash-btn dash-btn-accent" href="404.html">Donate again <i class="bi bi-heart-fill"></i></a>
+            <a class="dash-btn dash-btn-light" href="404.html">Explore campaigns <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="welcome-aside">
+          <div class="welcome-mini">
+            <span>Total given</span>
+            <strong>$1,240</strong>
+            <small>Since 2019</small>
+          </div>
+          <div class="welcome-mini">
+            <span>Lives impacted</span>
+            <strong>386</strong>
+            <small>Across 6 countries</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STATS ================= -->
+      <section class="stat-grid cols-4" aria-label="Your giving statistics">
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-emerald"><i class="bi bi-heart-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 18.2%</span>
+          </div>
+          <span class="stat-card-label">Total donated</span>
+          <strong class="stat-card-value">$1,240</strong>
+          <span class="stat-card-note">vs $1,049 last year</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-gold"><i class="bi bi-receipt"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 6</span>
+          </div>
+          <span class="stat-card-label">Number of donations</span>
+          <strong class="stat-card-value">42</strong>
+          <span class="stat-card-note">Last gift on Nov 8, 2026</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-sky"><i class="bi bi-megaphone-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 2 new</span>
+          </div>
+          <span class="stat-card-label">Supported campaigns</span>
+          <strong class="stat-card-value">6</strong>
+          <span class="stat-card-note">3 currently active</span>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-card-top">
+            <span class="stat-card-icon icon-rose"><i class="bi bi-people-fill"></i></span>
+            <span class="stat-trend up"><i class="bi bi-arrow-up-right"></i> 11.4%</span>
+          </div>
+          <span class="stat-card-label">Lives impacted</span>
+          <strong class="stat-card-value">386</strong>
+          <span class="stat-card-note">Estimated field impact</span>
+        </article>
+      </section>
+
+      <!-- ================= ANALYTICS ================= -->
+      <section class="dash-section" id="analytics" aria-labelledby="givingAnalyticsTitle">
+        <div class="dash-section-head">
+          <div>
+            <h2 id="givingAnalyticsTitle">Your giving</h2>
+            <p>Donation history and how your support is distributed</p>
+          </div>
+          <span class="dash-chip emerald"><i class="bi bi-shield-check"></i> Verified impact</span>
+        </div>
+
+        <div class="chart-grid">
+          <article class="dash-card chart-card">
+            <div class="chart-card-head">
+              <div>
+                <h3>Donation history</h3>
+                <p>Your gifts over time</p>
+              </div>
+              <div class="dash-tabs" data-range-target="donorHistoryChart" role="group" aria-label="Donation history range">
+                <a class="dash-tab" href="404.html" role="button">6M</a>
+                <a class="dash-tab active" href="404.html" role="button">12M</a>
+                <a class="dash-tab" href="404.html" role="button">All</a>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="donorHistoryChart" role="img" aria-label="Line chart showing your donation history over time"></canvas>
+            </div>
+          </article>
+
+          <article class="dash-card chart-card">
+            <div class="chart-card-head">
+              <div>
+                <h3>Donation distribution</h3>
+                <p>Where your support goes</p>
+              </div>
+            </div>
+            <div class="chart-box">
+              <canvas id="donorDistributionChart" role="img" aria-label="Doughnut chart showing how your donations are distributed across causes"></canvas>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= DONATION HISTORY ================= -->
+      <section class="dash-card table-card" id="donationHistory" aria-labelledby="donationHistoryTitle">
+        <div class="card-head">
+          <div>
+            <h3 id="donationHistoryTitle">Recent donation history</h3>
+            <p>Your latest gifts and their status</p>
+          </div>
+          <a class="dash-link" href="404.html">View receipts <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="table-responsive">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Campaign</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Method</th>
+                <th scope="col">Status</th>
+                <th scope="col">Receipt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cell-muted">Nov 8, 2026</td>
+                <td>Clean Water for Bongo</td>
+                <td class="cell-strong">$250</td>
+                <td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Visa •••• 4242</span></td>
+                <td><span class="status-badge status-completed">Completed</span></td>
+                <td>
+                  <a class="receipt-download" href="404.html" aria-label="Download receipt for November 8 donation"><i class="bi bi-download"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-muted">Oct 22, 2026</td>
+                <td>Dhaka School Fund</td>
+                <td class="cell-strong">$100</td>
+                <td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Mastercard •••• 8891</span></td>
+                <td><span class="status-badge status-completed">Completed</span></td>
+                <td>
+                  <a class="receipt-download" href="404.html" aria-label="Download receipt for October 22 donation"><i class="bi bi-download"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-muted">Sep 14, 2026</td>
+                <td>Mobile Health Clinic</td>
+                <td class="cell-strong">$75</td>
+                <td><span class="method-cell"><i class="bi bi-paypal"></i> PayPal</span></td>
+                <td><span class="status-badge status-completed">Completed</span></td>
+                <td>
+                  <a class="receipt-download" href="404.html" aria-label="Download receipt for September 14 donation"><i class="bi bi-download"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-muted">Aug 2, 2026</td>
+                <td>Zero Hunger Boxes</td>
+                <td class="cell-strong">$60</td>
+                <td><span class="method-cell"><i class="bi bi-credit-card-2-front-fill"></i> Visa •••• 4242</span></td>
+                <td><span class="status-badge status-completed">Completed</span></td>
+                <td>
+                  <a class="receipt-download" href="404.html" aria-label="Download receipt for August 2 donation"><i class="bi bi-download"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="cell-muted">Jun 30, 2026</td>
+                <td>Clean Water for Bongo</td>
+                <td class="cell-strong">$150</td>
+                <td><span class="method-cell"><i class="bi bi-bank"></i> Bank transfer</span></td>
+                <td><span class="status-badge status-pending">Pending</span></td>
+                <td>
+                  <a class="receipt-download" href="404.html" aria-label="Download receipt for June 30 donation"><i class="bi bi-download"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= FEATURED CAMPAIGNS ================= -->
+      <section class="dash-section" id="featuredCampaigns" aria-labelledby="featuredCampaignsTitle">
+        <div class="dash-section-head">
+          <div>
+            <h2 id="featuredCampaignsTitle">Featured campaigns</h2>
+            <p>Programs where your support can go furthest next</p>
+          </div>
+          <a class="dash-link" href="404.html">Browse all causes <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-card">
+            <div class="featured-media">
+              <img src="images/photo-1548839140-29a749e1cf4d-640x360.webp" width="640" height="360" alt="Clean drinking water" loading="lazy" decoding="async">
+              <span class="dash-chip emerald"><i class="bi bi-droplet-fill"></i> Water</span>
+            </div>
+            <div class="featured-body">
+              <h3>Clean Water for Bongo</h3>
+              <p>Bring a permanent, solar-powered well to 1,400 people in rural Ghana.</p>
+              <div class="featured-progress-meta"><span><strong>$18,420</strong> raised</span><span>72%</span></div>
+              <div class="dash-progress"><span style="width:72%"></span></div>
+              <div class="featured-foot">
+                <span>Goal $25,500 · 214 donors</span>
+                <a class="dash-btn dash-btn-accent dash-btn-sm" href="404.html">Donate</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-media">
+              <img src="images/photo-1509062522246-3755977927d7-640x360.webp" width="640" height="360" alt="Children in a classroom" loading="lazy" decoding="async">
+              <span class="dash-chip gold"><i class="bi bi-book-fill"></i> Education</span>
+            </div>
+            <div class="featured-body">
+              <h3>Dhaka School Fund</h3>
+              <p>Stock classrooms with books, desks and a full year of teacher training.</p>
+              <div class="featured-progress-meta"><span><strong>$11,600</strong> raised</span><span>58%</span></div>
+              <div class="dash-progress gold"><span style="width:58%"></span></div>
+              <div class="featured-foot">
+                <span>Goal $20,000 · 168 donors</span>
+                <a class="dash-btn dash-btn-accent dash-btn-sm" href="404.html">Donate</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card">
+            <div class="featured-media">
+              <img src="images/photo-1576091160550-2173dba999ef-640x360.webp" width="640" height="360" alt="Doctor at a mobile clinic" loading="lazy" decoding="async">
+              <span class="dash-chip sky"><i class="bi bi-heart-pulse-fill"></i> Health</span>
+            </div>
+            <div class="featured-body">
+              <h3>Mobile Health Clinic</h3>
+              <p>Fund a mobile clinic that reaches six remote villages every month.</p>
+              <div class="featured-progress-meta"><span><strong>$9,800</strong> raised</span><span>65%</span></div>
+              <div class="dash-progress"><span style="width:65%"></span></div>
+              <div class="featured-foot">
+                <span>Goal $15,000 · 132 donors</span>
+                <a class="dash-btn dash-btn-accent dash-btn-sm" href="404.html">Donate</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================= RECEIPTS ================= -->
+      <section class="dash-card" id="receipts" aria-labelledby="receiptsTitle">
+        <div class="card-head">
+          <div>
+            <h3 id="receiptsTitle">Donation receipts</h3>
+            <p>Tax-ready records for every gift</p>
+          </div>
+          <a class="dash-btn dash-btn-ghost dash-btn-sm" href="404.html"><i class="bi bi-download"></i> Download all</a>
+        </div>
+
+        <div class="receipt-list">
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info">
+              <strong>Receipt #STK-2026-1042</strong>
+              <span>Nov 8, 2026 · Clean Water for Bongo</span>
+            </div>
+            <span class="receipt-amount">$250</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-1042"><i class="bi bi-download"></i></a>
+          </div>
+
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info">
+              <strong>Receipt #STK-2026-0987</strong>
+              <span>Oct 22, 2026 · Dhaka School Fund</span>
+            </div>
+            <span class="receipt-amount">$100</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0987"><i class="bi bi-download"></i></a>
+          </div>
+
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info">
+              <strong>Receipt #STK-2026-0901</strong>
+              <span>Sep 14, 2026 · Mobile Health Clinic</span>
+            </div>
+            <span class="receipt-amount">$75</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0901"><i class="bi bi-download"></i></a>
+          </div>
+
+          <div class="receipt-row">
+            <span class="receipt-icon"><i class="bi bi-file-earmark-text-fill"></i></span>
+            <div class="receipt-info">
+              <strong>Receipt #STK-2026-0844</strong>
+              <span>Aug 2, 2026 · Zero Hunger Boxes</span>
+            </div>
+            <span class="receipt-amount">$60</span>
+            <a class="receipt-download" href="404.html" aria-label="Download receipt STK-2026-0844"><i class="bi bi-download"></i></a>
+          </div>
+        </div>
+      </section>
+    
+    
+    </main>
+  </div>
+
+  <div class="dash-toast" id="dashToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i><span>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

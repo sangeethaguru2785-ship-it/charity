@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impact Gallery — Stackly | Charity &amp; Non-Profit</title>
+  <meta name="description" content="Stackly donor gallery — see the people, places and programs your giving supports.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/webp" href="images/logo.webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23f0a833' d='M12 21c-4.9-3.6-8.5-6.9-8.5-10.8C3.5 6.9 6 4.7 8.7 4.7c1.4 0 2.6.7 3.3 1.8.7-1.1 1.9-1.8 3.3-1.8 2.7 0 5.2 2.2 5.2 5.5 0 3.9-3.6 7.2-8.5 10.8z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body class="dash-body" data-dashboard="donor">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <aside class="dash-sidebar" id="dashSidebar" aria-label="Donor dashboard navigation">
+    <div class="dash-brand">
+      <a href="index.html" aria-label="Stackly — back to home">
+        <img src="images/logo.webp" alt="Stackly" width="97" height="40">
+      </a>
+      <button class="dash-sidebar-close" id="sidebarClose" type="button" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <nav class="dash-nav">
+      <span class="dash-nav-label">Workspace</span>
+      <a class="dash-nav-link" href="donor-dashboard.html"><i class="bi bi-grid-1x2-fill"></i> Overview</a>
+      <a class="dash-nav-link" href="donor-history.html"><i class="bi bi-clock-history"></i> Donation history</a>
+      <a class="dash-nav-link" href="donor-campaigns.html"><i class="bi bi-megaphone-fill"></i> Campaigns</a>
+      <a class="dash-nav-link" href="donor-receipts.html"><i class="bi bi-receipt"></i> Receipts</a>
+      <span class="dash-nav-label">Explore</span>
+      <a class="dash-nav-link" href="donor-causes.html"><i class="bi bi-heart-fill"></i> Causes</a>
+      <a class="dash-nav-link" href="donor-events.html"><i class="bi bi-calendar-heart-fill"></i> Events</a>
+      <a class="dash-nav-link active" href="donor-gallery.html" aria-current="page"><i class="bi bi-camera-fill"></i> Gallery</a>
+      <span class="dash-nav-label">Account</span>
+      <a class="dash-nav-link" href="donor-settings.html"><i class="bi bi-sliders2"></i> Settings</a>
+      <a class="dash-nav-link" href="donor-support.html"><i class="bi bi-life-preserver"></i> Help & support</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <div class="dash-side-actions">
+        <a class="dash-side-btn" href="index.html"><i class="bi bi-house-door-fill"></i> Go to Home</a>
+        <a class="dash-side-btn dash-side-btn-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-header">
+      <button class="dash-menu-btn" id="dashMenuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="dashSidebar">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="dash-head-title">
+        <h1>Gallery</h1>
+        <p>Moments of impact &middot; <span>November 2026</span></p>
+      </div>
+
+      <div class="dash-head-actions">
+        <div class="dropdown">
+          <button class="dash-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open profile menu">
+            <span class="avatar avatar-emerald">SM</span>
+            <span class="dash-profile-meta"><strong>Sarah Mitchell</strong><span>Gold donor</span></span>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end dash-dropdown">
+            <li><a class="dropdown-item" href="donor-settings.html"><i class="bi bi-person-fill"></i>My profile</a></li>
+            <li><a class="dropdown-item" href="donor-settings.html"><i class="bi bi-gear-fill"></i>Account settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="index.html"><i class="bi bi-house-door-fill"></i>Go to Home</a></li>
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content" id="main">
+      <div class="dash-page-head">
+        <div>
+          <h2>Gallery</h2>
+          <p>See the people, places and programs your generosity helps support.</p>
+        </div>
+        <div class="dash-page-actions"><a class="dash-btn dash-btn-light" href="404.html"><i class="bi bi-camera-fill"></i> Share your story</a></div>
+      </div>
+      <div class="dash-callout">
+        <i class="bi bi-images"></i>
+        <div><strong>Real moments, real impact</strong><p>Every photo below comes from a Stackly program update. Open a card to explore the story behind the image.</p></div>
+      </div>
+      <section class="dash-section" aria-labelledby="impactGalleryTitle">
+        <div class="dash-section-head">
+          <div>
+            <h2 id="impactGalleryTitle">Impact gallery</h2>
+            <p>Snapshots from campaigns you have supported</p>
+          </div>
+          <a class="dash-link" href="404.html">View full album <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="images/photo-1548839140-29a749e1cf4d-640x360.webp" width="640" height="360" alt="Clean water well" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Clean Water for Bongo</h3>
+              <p>A new solar-powered well serving 1,400 people in rural Ghana.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1509062522246-3755977927d7-640x360.webp" width="640" height="360" alt="Children in a classroom" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Dhaka School Fund</h3>
+              <p>New desks, books and teacher training for 320 students.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1576091160550-2173dba999ef-640x360.webp" width="640" height="360" alt="Doctor at a mobile clinic" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Mobile Health Clinic</h3>
+              <p>A monthly clinic reaching six remote villages.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1593113598332-cd288d649433-640x360.webp" width="640" height="360" alt="Food support" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Zero Hunger Boxes</h3>
+              <p>Family food boxes packed by volunteers in London.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1548199973-03cce0bbc87b-640x360.webp" width="640" height="360" alt="Animal rescue" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Animal Rescue Fund</h3>
+              <p>Rescued animals receiving shelter and veterinary care.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1466611653911-95081537e5b7-640x360.webp" width="640" height="360" alt="Wind turbines" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Climate Action</h3>
+              <p>Community-led reforestation and clean energy projects.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1559027615-cd4628902d4a-640x360.webp" width="640" height="360" alt="Community volunteers" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Community Health Drive</h3>
+              <p>Local volunteers supporting a free health screening day.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1497486751825-1233686d5d80-640x360.webp" width="640" height="360" alt="Students learning" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Girls in STEM</h3>
+              <p>Scholarship students exploring science and technology.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <img src="images/photo-1416879595882-3373a0480b5b-640x360.webp" width="640" height="360" alt="Community garden" loading="lazy" decoding="async">
+            <div class="gallery-card-body">
+              <h3>Community Gardens</h3>
+              <p>A neighborhood garden growing fresh food for local families.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="dash-toast" id="dashToast" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i><span>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
