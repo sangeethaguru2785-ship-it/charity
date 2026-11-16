@@ -1518,9 +1518,11 @@ img {
   background: #fff;
   border-radius: 0.8rem;
   padding: 0.72rem 0;
+  min-height: 46px;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--ink);
+  touch-action: manipulation;
   transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
 .amount-grid button:hover {
@@ -1710,6 +1712,7 @@ img {
 .newsletter-form .btn {
   padding: 0.6rem 1.05rem;
   flex-shrink: 0;
+  touch-action: manipulation;
 }
 .footer-bottom {
   display: flex;
@@ -2160,6 +2163,15 @@ img {
   }
   .donation-card {
     border-radius: 1.2rem;
+  }
+  .amount-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #customAmount {
+    font-size: 16px;
+  }
+  .newsletter-form input {
+    font-size: 16px;
   }
 
   .testimonial-stage {

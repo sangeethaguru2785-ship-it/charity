@@ -564,12 +564,25 @@
         txt + (freq === "monthly" ? " — every single month" : "");
     }
 
+    function clearCustomError() {
+      if (!custom) return;
+      custom.classList.remove("is-invalid");
+      custom.setAttribute("aria-invalid", "false");
+      custom.setCustomValidity("");
+      const error = widget.querySelector(".field-error");
+      if (error) {
+        error.classList.remove("is-visible");
+        error.textContent = "";
+      }
+    }
+
     chips.forEach((chip) =>
       chip.addEventListener("click", () => {
         chips.forEach((c) => c.classList.remove("active"));
         chip.classList.add("active");
         amount = parseInt(chip.dataset.amount, 10);
         if (custom) custom.value = "";
+        clearCustomError();
         render();
         if (!REDUCED) {
           gsap.fromTo(impactLine, { y: 8, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.35, ease: "power2.out" });
@@ -584,6 +597,17 @@
           amount = Math.round(v * 100) / 100;
           chips.forEach((c) => c.classList.remove("active"));
           render();
+        } else if (!custom.value.trim()) {
+          amount = 25;
+          chips.forEach((c) => c.classList.toggle("active", parseInt(c.dataset.amount, 10) === 25));
+          render();
+        }
+      });
+
+      custom.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          donateBtn.click();
         }
       });
     }
@@ -603,14 +627,21 @@
     );
 
     donateBtn.addEventListener("click", () => {
-      showToast(
-        "Thank you! Preparing your $" + amount + " " +
-          (freq === "monthly" ? "monthly " : "") + "donation…",
-        "bi-heart-fill"
-      );
-      if (!REDUCED) {
-        gsap.fromTo(donateBtn, { scale: 0.96 }, { scale: 1, duration: 0.5, ease: "elastic.out(1, 0.5)" });
+      if (custom && custom.classList.contains("is-invalid")) {
+        custom.focus();
+        return;
       }
+
+      if (custom && custom.value.trim()) {
+        const v = parseFloat(custom.value);
+        if (!Number.isFinite(v) || v < 1) {
+          custom.focus();
+          return;
+        }
+        amount = Math.round(v * 100) / 100;
+      }
+
+      window.location.assign("404.html");
     });
 
     /* Tier shortcut buttons (donate page) — set amount + focus widget */
@@ -621,6 +652,7 @@
         amount = v;
         chips.forEach((c) => c.classList.toggle("active", parseInt(c.dataset.amount, 10) === v));
         if (custom) custom.value = "";
+        clearCustomError();
         render();
         widget.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "center" });
         if (!REDUCED) {
@@ -630,19 +662,6 @@
     });
 
     render();
-  }
-
-  /* ---------------------------------------------------------
-     Newsletter (demo submit)
-  --------------------------------------------------------- */
-  function initNewsletter() {
-    const form = $("#newsletterForm");
-    if (!form) return;
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      showToast("Welcome aboard — kindness is incoming to your inbox!", "bi-heart-fill");
-      form.reset();
-    });
   }
 
   /* ---------------------------------------------------------
@@ -787,7 +806,6 @@
     initBackToTop();
     initGallery();
     initDonation();
-    initNewsletter();
     initForms();
     initFilters();
     initCountdown();

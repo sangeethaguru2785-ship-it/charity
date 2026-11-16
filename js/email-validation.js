@@ -1,10 +1,10 @@
 (() => {
   "use strict";
 
-  const DISALLOWED = /[^A-Za-z0-9@.]/g;
-  const EMAIL_PATTERN = /^[A-Za-z0-9]+(?:\.[A-Za-z0-9]+)*@[A-Za-z0-9]+(?:\.[A-Za-z0-9]+)+$/;
+  const EMAIL_PATTERN = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+  const EMPTY_MESSAGE = "Please enter your email address.";
   const ERROR_MESSAGE =
-    "Enter a valid email using only letters, numbers, @ and . — no spaces or other special characters.";
+    "Enter a valid email address — for example, name@example.com.";
   const errorElements = new WeakMap();
 
   function getErrorElement(input) {
@@ -32,24 +32,13 @@
     return error;
   }
 
-  function sanitize(input) {
-    const raw = input.value;
-    const cleaned = raw.replace(DISALLOWED, "");
-    if (raw === cleaned) return;
-
-    const caret = input.selectionStart ?? raw.length;
-    const cleanedCaret = raw.slice(0, caret).replace(DISALLOWED, "").length;
-    input.value = cleaned;
-    input.setSelectionRange(cleanedCaret, cleanedCaret);
-  }
-
-  function setValidity(input, isValid, show) {
-    input.setCustomValidity(isValid ? "" : ERROR_MESSAGE);
+  function setValidity(input, isValid, show, message) {
+    input.setCustomValidity(isValid ? "" : message);
     input.setAttribute("aria-invalid", isValid ? "false" : "true");
     input.classList.toggle("is-invalid", !isValid && show);
 
     const error = getErrorElement(input);
-    error.textContent = !isValid && show ? ERROR_MESSAGE : "";
+    error.textContent = !isValid && show ? message : "";
     error.classList.toggle("is-visible", !isValid && show);
 
     const newsletter = input.closest(".newsletter-form");
@@ -57,8 +46,16 @@
   }
 
   function validate(input, show = true) {
-    const isValid = EMAIL_PATTERN.test(input.value.trim());
-    setValidity(input, isValid, show);
+    const value = input.value.trim();
+
+    if (!value) {
+      const isValid = !input.required;
+      setValidity(input, isValid, show, EMPTY_MESSAGE);
+      return isValid;
+    }
+
+    const isValid = EMAIL_PATTERN.test(value);
+    setValidity(input, isValid, show, ERROR_MESSAGE);
     return isValid;
   }
 
@@ -70,9 +67,8 @@
       if (form) form.noValidate = true;
 
       input.addEventListener("input", () => {
-        sanitize(input);
         if (input.dataset.emailTouched === "true") {
-          validate(input, input.value.trim().length > 0);
+          validate(input);
         }
       });
 
@@ -101,6 +97,13 @@
           event.preventDefault();
           event.stopImmediatePropagation();
           firstInvalid.focus();
+          return;
+        }
+
+        if (form.classList.contains("newsletter-form")) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          window.location.assign("404.html");
         }
       },
       true
